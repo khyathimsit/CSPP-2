@@ -36,10 +36,9 @@ public final class Solution {
         /**.
             *Power function
         */
-        if (exponent != 0) 
-        {
+        if (exponent != 0) {
             return (base * power(base, exponent - 1));
-        }
+                           }
         else {
             return 1;
         }
