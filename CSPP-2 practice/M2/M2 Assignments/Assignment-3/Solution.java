@@ -33,9 +33,11 @@ public class Solution {
 	Need to write the power function and print the output.
 	*/
 	public static long power(int base, int exponent) {
-        if (exponent != 0)
+        if (exponent != 0) {
             return (base * power(base, exponent - 1));
-        else
+        }
+        else {
             return 1;
+        }
     }
 }
