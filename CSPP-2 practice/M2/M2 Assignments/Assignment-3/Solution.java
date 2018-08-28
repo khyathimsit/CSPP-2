@@ -17,7 +17,7 @@ public final class Solution {
         * @param args of type string : command line arguments
     */
     public static void main(final String[] args) {
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int base = s.nextInt();
         int exponent = s.nextInt();
         long result = power(base, exponent);
@@ -28,6 +28,9 @@ public final class Solution {
     Need to write the power function and print the output.
     */
     public static long power(final int base, final int exponent) {
+        /**.
+            *Power function
+        */
         if (exponent != 0) {
             return (base * power(base, exponent - 1));
         }
