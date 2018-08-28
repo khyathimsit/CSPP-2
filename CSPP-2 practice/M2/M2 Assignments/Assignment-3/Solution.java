@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**.
     * scanner function for taking inputs
 */
-import java.lang.Math;
+import java.lang.Math.*;
 /**.
     * Math function for calculations
 */
@@ -22,10 +22,10 @@ public class Solution {
         * @param args of type string : command line arguments
     */
     public static void main(String[] args) {
-		Scanner s=new Scanner(System.in);      
+		Scanner s = new Scanner(System.in);      
         int base = s.nextInt();
         int exponent = s.nextInt();
-        long result=power(base,exponent);
+        long result = power(base,exponent);
         System.out.println(result);
 	}
 
