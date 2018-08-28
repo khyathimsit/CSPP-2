@@ -21,7 +21,7 @@ public final class Solution {
     /**.
         * @param args of type string : command line arguments
     */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
         int b = scan.nextInt();
@@ -33,10 +33,11 @@ public final class Solution {
     */
     /**
     * @return float
-    * @param base **this is base number**
-    * @param exponent **this is exponent value**
+    * @param a **value 1**
+    * @param b **value 2**
+    * @param c **value 3**
     */
-    public static float roots(int a, int b, int c)
+    public static float roots(final int a, final int b, final int c)
     {
         double determinant;
         determinant = (b * b) - (NUMBER * a * c);
