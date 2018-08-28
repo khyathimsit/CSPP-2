@@ -41,9 +41,9 @@ public final class Solution {
         determinant = (b * b) - (NUMBER * a * c);
         double r1;
         double r2;
-        r1 = (- b + java.lang.Math.sqrt(determinant)) / (2 * a);
-        r2 = (- b - java.lang.Math.sqrt(determinant)) / (2 * a);
-        System.out.println(+ r1 + " " + r2);
+        r1 = (-b + java.lang.Math.sqrt(determinant)) / (2 * a);
+        r2 = (-b - java.lang.Math.sqrt(determinant)) / (2 * a);
+        System.out.println(+r1 + " " + r2);
         return 0;
     }
 }
