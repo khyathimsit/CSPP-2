@@ -20,7 +20,7 @@ public class Solution {
     public static float rootsOfQuadraticEquation(int a, int b, int c)
     {
         double determinant;
-        determinant = (b * b) - 4 * a * c;
+        determinant = (b * b) - (4 * a * c);
         double r1;
         double r2;
         r1 = (-b+Math.sqrt(determinant))/2*a;
