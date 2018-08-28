@@ -14,6 +14,7 @@ public final class Solution {
     /**.
         *constructor
     */
+    private static final int NUMBER = 4;
     private Solution() {
         // zero argument constructor
     }
@@ -38,12 +39,12 @@ public final class Solution {
     public static float roots(int a, int b, int c)
     {
         double determinant;
-        determinant = (b * b) - (4 * a * c);
+        determinant = (b * b) - (NUMBER * a * c);
         double r1;
         double r2;
         r1 = (- b + Math.sqrt(determinant)) / (2 * a);
         r2 = (- b - Math.sqrt(determinant)) / (2 * a);
-        System.out.println(+ r1 +" " + r2);
+        System.out.println(+ r1 + " " + r2);
         return 0;
     }
 }
