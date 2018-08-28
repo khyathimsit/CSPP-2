@@ -38,8 +38,7 @@ public final class Solution {
         */
         if (exponent != 0) {
             return (base * power(base, exponent - 1));
-                           }
-        else {
+        } else {
             return 1;
         }
     }
