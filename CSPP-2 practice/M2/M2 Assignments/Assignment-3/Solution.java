@@ -28,6 +28,7 @@ public final class Solution {
     Need to write the power function and print the output.
     */
     /**
+    * @return float
     * @param base **this is base number**
     * @param exponent **this is exponent value**
     */
