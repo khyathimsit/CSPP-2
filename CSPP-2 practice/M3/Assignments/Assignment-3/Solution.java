@@ -17,14 +17,14 @@ public class Solution {
     Need to write the gcd function and print the output.
     */
     public static int gcd(final int a, final int b) {
-        int c, d;
-       while (b != 0) {
-        if (a > b) {
-            c = a - b;
-        } else {
-            d = b - a;
+       int gcd_val = 0;
+       for(int i=1;i<=a&&i<=b;i++)
+       {
+        if(a%i==0&&b%i==0)
+        {
+            gcd_val=i;
         }
        }
-       return a;
+       return gcd_val;
     }
 }
