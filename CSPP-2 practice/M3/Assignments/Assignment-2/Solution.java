@@ -10,13 +10,21 @@ public final class Solution {
     /**.
         *constructor
     */
+    private static final int N1 = 7;
+    /**.
+        Conversion value
+    */
+    private static final int N2 = 10;
+    /**.
+        Conversion value
+    */
     private Solution() {
         // zero argument constructor
     }
     /**.
         * @param args of type string : command line arguments
     */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int i = 0;
@@ -24,10 +32,10 @@ public final class Solution {
         for (i = 1; i <= n; i++) {
         	int j = i;
         	while (j != 0) {
-        		if (j % 10 == 7) {
+        		if (j % N2 == N1) {
         			cnt = cnt + 1;
         		}
-        		j = j / 10;
+        		j = j / N2;
         	}
         }
         System.out.println(cnt);
