@@ -30,13 +30,13 @@ public final class Solution {
         int i = 0;
         int cnt = 0;
         for (i = 1; i <= n; i++) {
-        	int j = i;
-        	while (j != 0) {
-        		if (j % N2 == N1) {
-        			cnt = cnt + 1;
-        		}
-        		j = j / N2;
-        	}
+            int j = i;
+            while (j != 0) {
+                if (j % N2 == N1) {
+                    cnt = cnt + 1;
+                }
+                j = j / N2;
+            }
         }
         System.out.println(cnt);
     }
