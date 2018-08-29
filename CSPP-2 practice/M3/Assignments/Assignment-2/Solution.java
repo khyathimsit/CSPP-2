@@ -5,15 +5,14 @@ import java.util.Scanner;
 public class Solution {
 /* Fill the main function to print the number of 7's between 1 to n*/
     public static void main(String[] args) {
-
-        Scanner s=new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int i = 0;
         int cnt = 0;
-        for(i = 1;i <= n;i++) {
+        for (i = 1;i <= n;i++) {
         	int j = i;
-        	while(j != 0) {
-        		if(j % 10 ==7) {
+        	while (j != 0) {
+        		if (j % 10 == 7) {
         			cnt = cnt + 1;
         		}
         		j = j / 10;
