@@ -5,9 +5,9 @@ import java.util.Scanner;
 	*/
 public class Solution {
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
-        Scanner s=new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);      
         int n1 = s.nextInt();
         int n2 = s.nextInt();
         int x = gcd(n1,n2);
@@ -16,17 +16,12 @@ public class Solution {
     /*
 	Need to write the gcd function and print the output.
 	*/
-    public static int gcd(int a, int b)
-    {
-       while(b!=0)
-       {
-        if(a>b)
-        {
-            a=a-b;
-        }
-        else
-        {
-            b=b-a;
+    public static int gcd(int a, int b) {
+       while (b != 0) {
+        if ( a > b) {
+            a = a - b;
+        } else {
+            b = b - a;
         }
        }
        return a;
