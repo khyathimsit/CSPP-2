@@ -42,6 +42,3 @@ public final class Solution {
        return gcdval;
     }
 }
-
-
-
