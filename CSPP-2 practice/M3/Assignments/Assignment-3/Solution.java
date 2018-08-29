@@ -33,12 +33,12 @@ public final class Solution {
     * @param b **number 2**
     */
     public static int gcd(final int a, final int b) {
-       int gcd_val = 0;
+       int gcdval = 0;
        for (int i = 1; i <= a && i <= b; i++) {
         if (a % i == 0 && b % i == 0) {
-            gcd_val = i;
+            gcdval = i;
         }
        }
-       return gcd_val;
+       return gcdval;
     }
 }
