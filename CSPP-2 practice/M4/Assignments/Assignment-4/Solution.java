@@ -17,23 +17,26 @@ public final class Solution {
     /**.
         * @param args of type string : command line arguments
     */
-	public static void main(final String[] args) {
-		Scanner sc = new Scanner(System.in);
-	    String s = sc.nextLine();
-		String reverse = reverseString(s);	
-		System.out.println(reverse);
-		
-	}
-	//Write reverseString function
-	public static  String reverseString(String str) {
-		//int length = str.length();
-		char c[] = str.toCharArray();
-		for (int f = 0, l = str.length() - 1; f < l; f++, l--) {
-			char temp = c[f];
-			c[f] = c[l];
-			c[l] = temp;
-		}
-		return String.copyValueOf(c);
-	}
+    public static void main(final String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        String reverse = reverseString(s);
+        System.out.println(reverse);
 
+    }
+    //Write reverseString function
+    /**
+    * @return string
+    * @param str **string**
+    */
+    public static  String reverseString(final String str) {
+        //int length = str.length();
+        char[]c = str.toCharArray();
+        for (int f = 0, l = str.length() - 1; f < l; f++, l--) {
+            char temp = c[f];
+            c[f] = c[l];
+            c[l] = temp;
+        }
+        return String.copyValueOf(c);
+    }
 }
