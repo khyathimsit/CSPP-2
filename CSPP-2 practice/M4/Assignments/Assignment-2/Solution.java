@@ -47,7 +47,7 @@ public final class Solution {
                 }
                 res = res.trim() + "\n";
             }
-            System.out.print(c);
+            System.out.print(res);
         } else {
             System.out.println("not possible");
         }
