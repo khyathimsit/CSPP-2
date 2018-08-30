@@ -38,7 +38,7 @@ public final class Solution {
             }
         }
         if (row1 == row2 && col1 == col2) {
-            int[][]c= new int[row2][col2];
+            int[][]c = new int[row2][col2];
             for (int i = 0; i < row1; i++) {
                 for (int j = 0; j < col2; j++) {
                     c[i][j] = mat1[i][j] + mat2[i][j];
