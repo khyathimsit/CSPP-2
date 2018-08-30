@@ -1,0 +1,48 @@
+import java.util.*;
+public class Solution {
+	/* Fill the main function to print resultant of addition of matrices*/
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		// int res[][];
+		int row1= sc.nextInt();
+		int col1= sc.nextInt();
+        int mat1[][] = new int[row1][col1];
+        for (int c = 0 ; c < row1 ; c++ ){
+        	for (int d = 0 ; d < col1 ; d++){
+        		mat1[c][d] = sc.nextInt();
+        	}
+        }
+        //System.out.println(mat1);
+
+        int row2= sc.nextInt();
+		int col2= sc.nextInt();
+        int mat2[][] = new int[row2][col2];
+        for (int c = 0 ; c < row2 ; c++ ){
+        	for (int d = 0 ; d < col2; d++ ){
+        		mat2[c][d] = sc.nextInt();
+        	}
+        }
+        
+        int c[][]=new int[row2][col2];
+        for (int i = 0; i < row1; i++) 
+        {
+            for (int j = 0; j < col2; j++) 
+            {
+                
+                    c[i][j] = mat1[i][j] + mat2[i][j];
+                
+            }
+        }
+
+        for(int i=0;i<row1;i++)
+        {
+            for(int j=0;j<col2;j++)
+            {
+               System.out.print(c[i][j]);   
+            }
+            System.out.println();
+        }
+
+            //System.out.println(c[i][j]);
+    }
+}
