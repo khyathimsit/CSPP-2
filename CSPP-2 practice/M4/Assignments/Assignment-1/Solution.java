@@ -22,7 +22,7 @@ public final class Solution {
         int n = sc.nextInt();
         int[] array = new int[n];
         for (int i = 0; i < n; i++) {
-           array[i]=sc.nextInt();
+           array[i] = sc.nextInt();
         }
         int max = array[0];
         for (int i = 0; i < n; i++) {
