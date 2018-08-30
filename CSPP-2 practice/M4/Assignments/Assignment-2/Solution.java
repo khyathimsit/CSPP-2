@@ -22,27 +22,30 @@ public class Solution {
         		mat2[c][d] = sc.nextInt();
         	}
         }
-        
-        int c[][]=new int[row2][col2];
-        for (int i = 0; i < row1; i++) 
+        if(row1==row2 &&col1==col2)
         {
-            for (int j = 0; j < col2; j++) 
+            int c[][]=new int[row2][col2];
+            for (int i = 0; i < row1; i++) 
             {
-                
+                for (int j = 0; j < col2; j++) 
+                {
                     c[i][j] = mat1[i][j] + mat2[i][j];
-                
+                }
             }
-        }
 
-        for(int i=0;i<row1;i++)
-        {
-            for(int j=0;j<col2;j++)
+            for(int i=0;i<row1;i++)
             {
-               System.out.print(c[i][j] + " ");   
+                for(int j=0;j<col2;j++)
+                {
+                   System.out.print(c[i][j] + " ");   
+                }
+                System.out.println();
             }
-            System.out.println();
-        }
 
-            //System.out.println(c[i][j]);
+        }
+        else
+        {
+            System.out.println("not possible");
+        }
     }
 }
