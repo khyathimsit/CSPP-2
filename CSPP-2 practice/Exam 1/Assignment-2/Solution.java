@@ -24,40 +24,26 @@ final class Solution {
      */
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
 
-	// write ypur code here
-    	for(int i=0;i<rows;i++)
-    	{
-    		for(int j=0;j<columns;j++)
-    		{
-    			if(a[i][j] >=0 && a[i][j] <50)
-    			{
-    				a[i][j] = 0;
-    			}
-    			else if (a[i][j]>=50 && a[i][j]<150)
-    			{
-    				a[i][j] = 100;
-    			}
-    			else if (a[i][j]>=150 && a[i][j]<250)
-    			{
-    				a[i][j] = 200;
-    			}
-    			else if (a[i][j]>=250 && a[i][j]<350)
-    			{
-    				a[i][j] = 300;
-    			}
-    			else if (a[i][j]>=350 && a[i][j]<450)
-    			{
-    				a[i][j] = 400;
-    			}
-    			else
-    			{
-    				a[i][j] = 500;
-    			}
+    // write ypur code here
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                if (a[i][j] >= 0 && a[i][j] < 50) {
+                    a[i][j] = 0;
+                } else if (a[i][j] >= 50 && a[i][j] < 150) {
+                    a[i][j] = 100;
+                } else if (a[i][j] >= 150 && a[i][j] < 250) {
+                    a[i][j] = 200;
+                } else if (a[i][j] >= 250 && a[i][j] < 350) {
+                    a[i][j] = 300;
+                } else if (a[i][j] >= 350 && a[i][j] < 450) {
+                    a[i][j] = 400;
+                } else {
+                    a[i][j] = 500;
+                }
 
-    		}
-    	}
-    	return a;
-	
+            }
+        }
+        return a;
     }
     /**
      * Main function.
