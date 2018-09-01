@@ -9,6 +9,46 @@ final class Solution {
     /**
      * Constructs the object.
      */
+    private static final int NUM1 = 50;
+    /**.
+        Conversion value
+    */
+    private static final int NUM2 = 150;
+    /**.
+        Conversion value
+    */
+    private static final int NUM3 = 250;
+    /**.
+        Conversion value
+    */
+    private static final int NUM4 = 350;
+    /**.
+        Conversion value
+    */
+    private static final int NUM5 = 450;
+    /**.
+        Conversion value
+    */
+    private static final int NUM6 = 500;
+    /**.
+        Conversion value
+    */
+    private static final int HUNDRED = 100;
+    /**.
+        Conversion value
+    */
+    private static final int TWOHUNDRED = 200;
+    /**.
+        Conversion value
+    */
+    private static final int THREEHUNDRED = 300;
+    /**.
+        Conversion value
+    */
+    private static final int FOURHUNDRED = 400;
+    /**.
+        Conversion value
+    */
     private Solution() {
         //not used
     }
@@ -22,24 +62,24 @@ final class Solution {
      *
      * @return     Matrix of the rounded elements
      */
-    static int[][] roundHundred(final int[][] a, 
+    static int[][] roundHundred(final int[][] a,
         final int rows, final int columns) {
 
     // write ypur code here
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                if (a[i][j] >= 0 && a[i][j] < 50) {
+                if (a[i][j] >= 0 && a[i][j] < NUM1) {
                     a[i][j] = 0;
-                } else if (a[i][j] >= 50 && a[i][j] < 150) {
-                    a[i][j] = 100;
-                } else if (a[i][j] >= 150 && a[i][j] < 250) {
-                    a[i][j] = 200;
-                } else if (a[i][j] >= 250 && a[i][j] < 350) {
-                    a[i][j] = 300;
-                } else if (a[i][j] >= 350 && a[i][j] < 450) {
-                    a[i][j] = 400;
+                } else if (a[i][j] >= NUM1 && a[i][j] < NUM2) {
+                    a[i][j] = HUNDRED;
+                } else if (a[i][j] >= NUM2 && a[i][j] < NUM3) {
+                    a[i][j] = TWOHUNDRED;
+                } else if (a[i][j] >= NUM3 && a[i][j] < NUM4) {
+                    a[i][j] = THREEHUNDRED;
+                } else if (a[i][j] >= NUM4 && a[i][j] < NUM5) {
+                    a[i][j] = FOURHUNDRED;
                 } else {
-                    a[i][j] = 500;
+                    a[i][j] = NUM6;
                 }
 
             }
