@@ -8,6 +8,9 @@ import java.util.Scanner;
 */
 class InputValidator {
     /*Write the atrributes and methods for InputValidator*/
+    /**.
+     * Input validator class
+     */
     private String data;
     /**.
      * here data given is string
@@ -20,6 +23,7 @@ class InputValidator {
     InputValidator(String data) {
     this.data = data;
     }
+    private static final int NUM = 6;
     /**.
      * to check the length of the input
      *
@@ -28,7 +32,7 @@ class InputValidator {
      * @return     true or false
      */
     public static boolean validateData(final String input) {
-        return input.length() >= 6;
+        return input.length() >= NUM;
     }
 }
 /**.
