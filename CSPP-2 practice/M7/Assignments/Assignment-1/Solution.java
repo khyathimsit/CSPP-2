@@ -23,7 +23,7 @@ class InputValidator {
     /**.
      * to check the length of the input
      *
-     * @param      string  The length
+     * @param      input  The length
      *
      * @return     true or false
      */
@@ -31,6 +31,9 @@ class InputValidator {
         return input.length() >= 6;
     }
 }
+/**.
+ * class
+ */
 public final class Solution {
     /**.
         *constructor
