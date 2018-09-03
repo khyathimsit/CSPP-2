@@ -12,33 +12,23 @@ class InputValidator {
     /**.
      * here data given is string
      */
-    private final int length;
-    /**.
-     * length of the data
-     */
     /**
      * Constructs the object.
      *
      * @param      data  The data
-     * @param      len   The length
      */
-    InputValidator(String data, final int len) {
+    InputValidator(String data) {
     this.data = data;
-    this.length = len;
     }
     /**.
      * to check the length of the input
      *
-     * @param      length  The length
+     * @param      string  The length
      *
      * @return     true or false
      */
-    public static boolean validateData(final int length) {
-        if (length >= 6) {
-            return true;
-        } else {
-            return false;
-        }
+    public static boolean validateData(final String input) {
+        return input.length() >= 6;
     }
 }
 public final class Solution {
@@ -54,8 +44,8 @@ public final class Solution {
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         String input = s.next();
-        int length = input.length();
-        InputValidator i = new InputValidator(input, length);
-        System.out.println(i.validateData(length));
+        //int length = input.length();
+        InputValidator i = new InputValidator(input);
+        System.out.println(i.validateData(input));
     }
 }
