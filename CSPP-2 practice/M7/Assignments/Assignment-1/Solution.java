@@ -8,8 +8,14 @@ import java.util.Scanner;
 */
 class InputValidator {
     /*Write the atrributes and methods for InputValidator*/
-    String data;
-    int length;
+    private String data;
+    /**.
+     * here data given is string
+     */
+    final private int length;
+    /**.
+     * length of the data
+     */
     InputValidator(String data, int len) {
     /**.
         *constructor
