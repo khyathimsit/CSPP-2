@@ -20,8 +20,8 @@ class InputValidator {
      *
      * @param      data  The data
      */
-    InputValidator(final String data) {
-    this.data = data;
+    InputValidator(final String name) {
+    this.data = name;
     }
     private static final int NUM = 6;
     /**.
