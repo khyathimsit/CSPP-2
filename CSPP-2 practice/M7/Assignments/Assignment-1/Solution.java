@@ -12,18 +12,16 @@ class InputValidator {
     /**.
      * here data given is string
      */
-    final private int length;
+    private final int length;
     /**.
      * length of the data
      */
     InputValidator(String data, int len) {
-    /**.
-        *constructor
-    */
+    
     this.data = data;
     this.length = len;
     }
-    /**
+    /**.
      * to check the length of the input
      *
      * @param      length  The length
@@ -39,7 +37,6 @@ class InputValidator {
     }
 }
 public final class Solution {
-    /* Fill the main function to print resultant of addition of matrices*/
     /**.
         *constructor
     */
