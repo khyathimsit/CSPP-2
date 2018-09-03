@@ -1,4 +1,7 @@
-import java.util.*;
+/**
+ * Author: Khyathi
+ */
+import java.util.Scanner;
 class InputValidator {
 	/*Write the atrributes and methods for InputValidator*/
 	String data;
