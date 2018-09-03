@@ -18,7 +18,7 @@ class InputValidator {
     /**
      * Constructs the object.
      *
-     * @param      data  The data
+     * @param      name  The data
      */
     InputValidator(final String name) {
     this.data = name;
