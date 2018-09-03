@@ -23,6 +23,9 @@ class InputValidator {
     InputValidator(final String name) {
     this.data = name;
     }
+    /**.
+     * Converting the value to remove the magic number error
+     */
     private static final int NUM = 6;
     /**.
      * conversion value
