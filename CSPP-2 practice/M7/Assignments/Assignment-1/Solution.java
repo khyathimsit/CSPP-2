@@ -16,8 +16,13 @@ class InputValidator {
     /**.
      * length of the data
      */
-    InputValidator(String data, int len) {
-    
+    /**
+     * Constructs the object.
+     *
+     * @param      data  The data
+     * @param      len   The length
+     */
+    InputValidator(String data, final int len) {
     this.data = data;
     this.length = len;
     }
@@ -28,7 +33,7 @@ class InputValidator {
      *
      * @return     true or false
      */
-    public static boolean validateData(int length) {
+    public static boolean validateData(final int length) {
         if (length >= 6) {
             return true;
         } else {
