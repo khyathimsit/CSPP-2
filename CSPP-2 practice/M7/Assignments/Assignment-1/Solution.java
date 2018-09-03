@@ -20,10 +20,13 @@ class InputValidator {
      *
      * @param      data  The data
      */
-    InputValidator(String data) {
+    InputValidator(final String data) {
     this.data = data;
     }
     private static final int NUM = 6;
+    /**.
+     * conversion value
+     */
     /**.
      * to check the length of the input
      *
