@@ -81,7 +81,6 @@ public class List {
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
-     * 
      * The method returns void (nothing)
      */
     public void add(final int item) {
@@ -89,7 +88,6 @@ public class List {
         array[size] = item;
         size += 1;
     }
-
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
@@ -129,14 +127,13 @@ public class List {
         if (index < 0 || index >= size) {
             System.out.println("Invalid Position Exception");
         } else {
-            for (int i = index; i < size; i++){
+            for (int i = index; i < size; i++) {
                 array[i] = array[i + 1];
             }
             array[size - 1] = 0;
             size -= 1;
         }
     }
-
     /*
      * Get method has to return the items that is
      * at the index position passed as an argument to the method.
@@ -155,7 +152,6 @@ public class List {
         // }
         return array[index];
     }
-
     /*
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
@@ -199,7 +195,6 @@ public class List {
         }
         return false;
     }
-
     /*
      * Returns the index of the first occurrence
      * of the specified element in this list,
@@ -214,7 +209,6 @@ public class List {
         }
         return -1;
     }
-
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
