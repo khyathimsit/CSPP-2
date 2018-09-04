@@ -91,8 +91,11 @@ public class List {
      */
     public void add(int item) {
         //Inserts the specified element at the end of the list.
-        array[size] = item;
+        if(size < array.length) { 
+        	array[size] = item;
         size++;
+        }
+        
     }
 
     /*
