@@ -132,13 +132,13 @@ public class List {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if(index < 0 || index >=size) {
+        if (index < 0 || index >= size) {
         	System.out.println("Invalid Position Exception");
         } else {
-        	for(int i = index; i<size; i++){
-        		array[i] = array[i+1];
+        	for (int i = index; i < size; i++){
+        		array[i] = array[i + 1];
         	}
-        	array[size-1] = 0;
+        	array[size - 1] = 0;
         	size -= 1;
         }
     }
@@ -185,7 +185,7 @@ public class List {
     public String toString() {
         // Replace the code below
         int[] array2 = new int[size];
-        for(int i = 0; i< size; i++) {
+        for (int i = 0; i < size; i++) {
         	array2[i] = array[i];
         }
         return (Arrays.toString(array2).replace(" ",""));
@@ -199,8 +199,8 @@ public class List {
      */
     public boolean contains(int item) {
         // Replace the code below
-        for(int i=0;i<size - 1;i++) {
-        	if(item == array[i]){
+        for (int i = 0; i < size - 1; i++) {
+        	if (item == array[i]){
         		return true;
         	}
         }
