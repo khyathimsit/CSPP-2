@@ -186,7 +186,7 @@ public class List {
     public String toString() {
         // Replace the code below
         String str = "[";
-        for(int i = 0; i< size -1; i++) {
+        for(int i = 0; i< size; i++) {
         	str = str + array[i] + ",";
         }
         str = str + "]";
