@@ -26,11 +26,9 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-
     /*
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
@@ -50,11 +48,9 @@ public class List {
      * to be accessed by the methods that are outside of the List class.
      * 
      */
-
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
-
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
@@ -76,9 +72,7 @@ public class List {
         // That is the initial value to use for size.
         array = new int[10];
         size = size;
-
     }
-    
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -90,7 +84,7 @@ public class List {
      * 
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list. 
         array[size] = item;
         size += 1;
@@ -188,7 +182,7 @@ public class List {
         for (int i = 0; i < size; i++) {
             array2[i] = array[i];
         }
-        return (Arrays.toString(array2).replace(" " , ""));
+        return (Arrays.toString(array2).replace("",""));
     }
     /*
      * Contains return true if the list has
@@ -207,7 +201,7 @@ public class List {
     }
 
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
