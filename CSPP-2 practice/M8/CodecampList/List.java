@@ -201,9 +201,10 @@ public class List {
      */
     public boolean contains(int item) {
         // Replace the code below
-        int i = indexOf(item);
-        if (i == item) {
-        	return true;
+        for(int i=0;i<size - 1;i++) {
+        	if(item == array[i]){
+        		return true;
+        	}
         }
         return false;
     }
