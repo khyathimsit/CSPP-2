@@ -11,14 +11,11 @@ import java.util.Scanner;
     * scanner function for taking inputs
 */
 import java.util.Arrays;
-/**
+/**.
  * For manipulating arrays
  */
-
 public class List {
-    
     //Implement all the methods mentioned to build a ListADT
-
     /*
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
