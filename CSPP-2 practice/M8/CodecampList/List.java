@@ -154,7 +154,7 @@ public class List {
      */
     /**.
      * remove function
-     * 
+     *
      * @param      index  The index
      */
     public void remove(final int index) {
@@ -178,7 +178,7 @@ public class List {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
     /**.
@@ -188,7 +188,7 @@ public class List {
      *
      * @return     required index value
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
         // if(index < 0 || index >=size) {
         //  System.out.println("Index Out Of Bounds Exception");
@@ -204,7 +204,7 @@ public class List {
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     * 
+     *
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -234,7 +234,7 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    /**
+    /**.
      * Function to check whether the item is present or not
      *
      * @param      item  The item
