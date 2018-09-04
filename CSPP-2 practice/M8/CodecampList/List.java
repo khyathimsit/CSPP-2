@@ -188,9 +188,8 @@ public class List {
         for (int i = 0; i < size; i++) {
             array2[i] = array[i];
         }
-        return (Arrays.toString(array2).replace(" ",""));
-    } 
-    
+        return (Arrays.toString(array2).replace(" " , ""));
+    }
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -212,9 +211,9 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
-        for (int i=0; i < size - 1; i++) {
+        for (int i = 0; i < size - 1; i++) {
             if (item == array[i]) {
                 return i;
             }
@@ -222,7 +221,7 @@ public class List {
         return -1;
     }
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -258,7 +257,7 @@ public class List {
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
                 break;
                 case "get":
-                if (Integer.parseInt(tokens[1]) < l.size()){
+                if (Integer.parseInt(tokens[1]) < l.size()) {
                     System.out.println(l.get(Integer.parseInt(tokens[1])));
                 }
                 break;
