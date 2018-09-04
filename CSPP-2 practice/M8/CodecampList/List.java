@@ -226,7 +226,7 @@ public class List {
         for (int i = 0; i < size; i++) {
             array2[i] = array[i];
         }
-        return (Arrays.toString(array2).replace(" "," "));
+        return (Arrays.toString(array2).replace(" ",""));
     }
     /*
      * Contains return true if the list has
