@@ -1,8 +1,22 @@
+/**
+    * Author : Khyathi.
+    * Date : 4/09/2018
+*/
 import java.io.BufferedInputStream;
+/**.
+ * to add the functionality to another input
+ */
 import java.util.Scanner;
+/**.
+    * scanner function for taking inputs
+*/
 import java.util.Arrays;
+/**
+ * For manipulating arrays
+ */
 
 public class List {
+    
     //Implement all the methods mentioned to build a ListADT
 
     /*
@@ -92,15 +106,12 @@ public class List {
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
-     * 
      * The method returns an int. Empty list should return 0.
      */
-
     public int size() {
         // replace the code below to implement the size method
         return size;
     }
-
     /*
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
