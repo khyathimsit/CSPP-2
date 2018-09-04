@@ -136,7 +136,7 @@ public class List {
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
      * It also does an additional step.
-     * Think about what happens when 
+     * Think about what happens when
      * an item is removed from the middle of the list
      * It creates a hole in the list, right?
      * This would mean, all the items that are
@@ -241,7 +241,7 @@ public class List {
      *
      * @return     boolean
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         for (int i = 0; i < size - 1; i++) {
             if (item == array[i]) {
@@ -255,7 +255,7 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    /**
+    /**.
      * To find the index of the required item
      *
      * @param      item  The item
@@ -271,7 +271,7 @@ public class List {
         }
         return -1;
     }
-    /**
+    /**.
      * Main function
      *
      * @param      args  The arguments
