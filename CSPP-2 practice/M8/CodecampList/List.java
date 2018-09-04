@@ -57,7 +57,7 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
     // declare a private int size
     // again, don't initialize it here
@@ -67,7 +67,20 @@ public class List {
      * class variables with some default values.
      */
     private int[] array;
+    /**
+     * array declaration
+     */
     private int size;
+    /**
+     * Size
+     */
+    /**.
+     * Converting the value to remove the magic number error
+     */
+    private static final int NUM = 10;
+    /**.
+     * conversion value
+     */
 
     public List() {
 
@@ -75,13 +88,13 @@ public class List {
         // think about the private variables described above.
         // What should be the default values?
         // In the case of the list, it should be empty but
-        // it should be initialized with an array size like 10
+        // it should be initialized with an array size like NUM
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        array = new int[10];
+        array = new int[NUM];
         size = size;
     }
     /*
@@ -269,3 +282,4 @@ public class List {
         }
     }
 }
+
