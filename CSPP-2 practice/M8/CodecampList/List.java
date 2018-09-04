@@ -66,14 +66,14 @@ public class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
-    private int[] array;
-    /**
-     * array declaration
+    /**.
+     * array declaration.
      */
-    private int size;
-    /**
+    private int[] array;
+    /**.
      * Size
      */
+    private int size;
     /**.
      * Converting the value to remove the magic number error
      */
@@ -107,8 +107,13 @@ public class List {
      * to the list.
      * The method returns void (nothing)
      */
+    /**.
+     * add function
+     *
+     * @param      item  The item
+     */
     public void add(final int item) {
-        //Inserts the specified element at the end of the list. 
+        //Inserts the specified element at the end of the list.
         array[size] = item;
         size += 1;
     }
@@ -117,6 +122,11 @@ public class List {
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
      * The method returns an int. Empty list should return 0.
+     */
+    /**.
+     * size function
+     *
+     * @return   size of the list
      */
     public int size() {
         // replace the code below to implement the size method
@@ -142,8 +152,8 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    /**
-     * { function_description }
+    /**.
+     * remove function
      * 
      * @param      index  The index
      */
@@ -170,6 +180,13 @@ public class List {
      * in the list then that would mean the item doesn't exist.
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
+     */
+    /**.
+     * get function
+     *
+     * @param      index  The index
+     *
+     * @return     required index value
      */
     public int get(int index) {
         // Replace the code below to write the code for get
@@ -198,6 +215,11 @@ public class List {
      * not all the elements of the array.
      *
      */
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         // Replace the code below
         int[] array2 = new int[size];
@@ -211,6 +233,13 @@ public class List {
      * the item passed as an argument to the method
      * So, iterate through the list and return true if
      * the item exists and otherwise false
+     */
+    /**
+     * Function to check whether the item is present or not
+     *
+     * @param      item  The item
+     *
+     * @return     boolean
      */
     public boolean contains(int item) {
         // Replace the code below
@@ -226,6 +255,13 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
+    /**
+     * To find the index of the required item
+     *
+     * @param      item  The item
+     *
+     * @return     returns the index
+     */
     public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size - 1; i++) {
@@ -235,6 +271,11 @@ public class List {
         }
         return -1;
     }
+    /**
+     * Main function
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
@@ -250,34 +291,36 @@ public class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
-                l.add(Integer.parseInt(tokens[1]));
-                break;
+                    l.add(Integer.parseInt(tokens[1]));
+                    break;
                 case "size":
                 // invoke size method and print the list size
                 // BTW, list size is not the array size
                 // it is the number of items in the list
-                System.out.println(l.size());
-                break;
+                    System.out.println(l.size());
+                    break;
                 case "print":
                 // print the list (implement toString for this to work)
                 // expected format is [item-1,item-2,...,item-n]
                 // review the output testcase file
-                System.out.println(l.toString());
-                break;
+                    System.out.println(l.toString());
+                    break;
                 case "remove":
-                l.remove(Integer.parseInt(tokens[1]));
-                break;
+                    l.remove(Integer.parseInt(tokens[1]));
+                    break;
                 case "indexOf":
-                System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
-                break;
+                    System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
+                    break;
                 case "get":
-                if (Integer.parseInt(tokens[1]) < l.size()) {
-                    System.out.println(l.get(Integer.parseInt(tokens[1])));
-                }
-                break;
+                    if (Integer.parseInt(tokens[1]) < l.size()) {
+                        System.out.println(l.get(Integer.parseInt(tokens[1])));
+                    }
+                    break;
                 case "contains":
-                System.out.println(l.contains(Integer.parseInt(tokens[1])));
-                break;
+                    System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                    break;
+                default:
+                    break;
             }
         }
     }
