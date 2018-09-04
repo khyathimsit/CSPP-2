@@ -93,7 +93,7 @@ public class List {
     public void add(int item) {
         //Inserts the specified element at the end of the list. 
         array[size] = item;
-        size++;
+        size += 1;
     }
 
     /*
@@ -135,11 +135,11 @@ public class List {
         if(index < 0 || index >=size) {
         	System.out.println("Invalid position exception");
         }
-        for(int i = index;i<size-1;i++){
+        for(int i = index; i<size; i++){
         	array[i] = array[i+1];
         }
         array[size-1] = 0;
-        size--;
+        size -= 1;
     }
 
     /*
