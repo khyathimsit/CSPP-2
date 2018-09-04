@@ -91,12 +91,9 @@ public class List {
      * The method returns void (nothing)
      */
     public void add(int item) {
-        //Inserts the specified element at the end of the list.
-        if(size < array.length) { 
-        	array[size] = item;
+        //Inserts the specified element at the end of the list. 
+        array[size] = item;
         size++;
-        }
-        
     }
 
     /*
