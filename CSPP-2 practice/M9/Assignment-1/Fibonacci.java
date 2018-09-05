@@ -22,7 +22,7 @@ import java.util.Scanner;
  * by invoking the add method provided in the List ADT.
  *
  */
-/**
+/**.
  * Class for finding the fibonacci series
  */
 public class Fibonacci {
@@ -36,7 +36,7 @@ public class Fibonacci {
     /**.
      * Fibonacci series function
      *
-     * @param n no of fibonnaci 
+     * @param n no of fibonnaci
      *@return     list
      */
     public static List fib(final int n) {
