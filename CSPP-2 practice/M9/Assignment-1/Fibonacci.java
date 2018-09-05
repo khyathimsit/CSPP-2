@@ -1,4 +1,10 @@
+/**
+ * Author : Khyathi
+ */
 import java.util.Scanner;
+/**
+ * Scanner class for taking the inputs
+ */
 
 /*
  * In the previous module you have created List ADT.
@@ -16,7 +22,9 @@ import java.util.Scanner;
  * by invoking the add method provided in the List ADT.
  *
  */
-
+/**
+ * Class for finding the fibonacci series
+ */
 public class Fibonacci
 {
     /*
@@ -26,7 +34,14 @@ public class Fibonacci
      *
      * Look for the hint.txt if some of the testcases fail.
      */
-    public static List fib(int n) {
+    /**
+     * Fibonacci series function
+     *
+     * @param      n     no of fibonnaci 
+     *
+     * @return     list
+     */
+    public static List fib(final int n) {
         // todo - complete this method
         // int n1 = 0;
         // int n2 = 1;
@@ -37,13 +52,17 @@ public class Fibonacci
         List fib = new List(n);
         fib.add(0);
         fib.add(1);
-        for(int i = 2; i < n; i++) {
+        for (int i = 2; i < n; i++) {
         	int fib1 = fib.get(i - 1) + fib.get(i - 2);
         	fib.add(fib1);
         }
         return fib;
     }
-
+    /**
+     * Main function
+     *
+     * @param      args  The arguments
+     */
 	public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
