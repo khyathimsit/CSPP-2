@@ -272,7 +272,6 @@ public class List {
         str = str + list[i] + "]";
         return str;
     }
-    
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -313,7 +312,9 @@ public class List {
    /*Inserts all the elements of specified int 
     array to the end of list*/
     /**.
-     * { item_description }
+     * Adds all.
+     *
+     * @param      items  The items
      */
     public void addAll(final int[] items) {
         for (int i = 0; i < items.length; i++) {
@@ -342,8 +343,7 @@ public class List {
         }
         list[index] = item;
         size++;
-    }
-    
+    }  
     /* Returns the count of occurances of a given item in the list*/
     /**.
      * { function_description }
