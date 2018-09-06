@@ -17,6 +17,9 @@ import java.util.Arrays;
 public class List {
     //Implement all the methods mentioned to build a ListADT
     private static final int N = 10;
+    /**.
+     * Replacing the value of 10 to remove the magic number error
+     */
     /*
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
@@ -180,6 +183,7 @@ public class List {
      */
     /**.
     size
+    @return int
     */
     public int size() {
         return size;
@@ -452,3 +456,4 @@ public class List {
         }
     }
 }
+
