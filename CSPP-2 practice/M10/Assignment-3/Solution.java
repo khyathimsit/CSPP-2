@@ -308,7 +308,6 @@ public final class Solution {
             break;
         }
     }
-
     public static void performStudent(final Scanner stdin) {
         List<Student> listStudent = new List();
         while (stdin.hasNext()) {
