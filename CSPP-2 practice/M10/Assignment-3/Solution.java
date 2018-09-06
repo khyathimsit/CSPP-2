@@ -230,9 +230,11 @@ public class Solution {
 		                case "contains":
 		                System.out.println(listCharacter.contains(tokens[1].charAt(0)));
 		                break;
+		                default:
+		                break;
 		            }
 		        }
-	        break;
+	        
 
 	        case "D"://This case will be executed for Double type list
         		List<Double> listDouble = new List();
@@ -298,7 +300,7 @@ public class Solution {
 			                listStudent.add(new Student(tokens[1]));
 		                break;
 		                case "addAll":
-		                if(tokens.length==2){
+		                if (tokens.length == 2) {
 		                String[] t1 = tokens[1].split(",");
 		                Student[] temp = new Student[t1.length];
 		                for (int i = 0; i < t1.length; i++) {
@@ -314,17 +316,15 @@ public class Solution {
 		                System.out.println(listStudent.size());
 		                break;
 		                case "print":
-		                // print the list (implement toString in List class
-		                //for this to work)
-		                // expected format is [item-1,item-2,...,item-n]
-		                // review the output testcase file
 		                System.out.println(listStudent);
 		                break;
 		                case "remove":
-		                listStudent.remove(Integer.parseInt(tokens[1]));
+		                listStudent.remove(Integer.
+		                parseInt(tokens[1]));
 		                break;
 		                case "indexOf":
-		                System.out.println(listStudent.indexOf(new Student(tokens[1])));
+		                System.out.println(listStudent.
+		                indexOf(new Student(tokens[1])));
 		                break;
 		                case "get":
 		                System.out.println(listStudent
