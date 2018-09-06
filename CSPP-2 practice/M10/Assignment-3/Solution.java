@@ -225,6 +225,11 @@ public final class Solution {
             break;
         }
     }
+    /**
+     * Implementation of Student function in switch case
+     *
+     * @param      stdin  The stdin
+     */
     public static void performStudent(final Scanner stdin) {
         List<Student> listStudent = new List();
         while (stdin.hasNext()) {
@@ -271,6 +276,11 @@ public final class Solution {
             }
         }
     }
+    /**
+     * Implementation of double function in switch
+     *
+     * @param      stdin  The stdin
+     */
     public static void performDouble(final Scanner stdin) {
         List<Double> listDouble = new List();
         while (stdin.hasNext()) {
@@ -316,6 +326,11 @@ public final class Solution {
             }
         }
     }
+    /**
+     * Implementation of char function in switch
+     *
+     * @param      stdin  The stdin
+     */
     public static void performCharacter(final Scanner stdin) {
         List<Character> listCharacter = new List();
                 while (stdin.hasNext()) {
