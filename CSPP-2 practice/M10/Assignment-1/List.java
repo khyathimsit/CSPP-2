@@ -43,6 +43,9 @@ public class List {
     // don't create the array yet using new
     // that's the job of the List constructor
     private int[] list;
+    /**
+     * { item_description }
+     */
 
     /*
      * What are the other class variables needed for creating a list?
@@ -68,6 +71,9 @@ public class List {
     // again, don't initialize it here
     // variable initialization should be done in the constructor
     private int size;
+    /**.
+     * { item_description }
+     */
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
@@ -121,7 +127,7 @@ public class List {
      */
     public void add(final int item) {
         //Inserts the specified element at the end of the zelist
-        if (size == list.length){
+        if (size == list.length) {
             resize();
         }
         list[size++] = item;   
@@ -223,7 +229,7 @@ public class List {
      * @return     { description_of_the_return_value }
      */
     public int get(int index) {
-        if(index < 0 || index >= size) {
+        if (index < 0 || index >= size) {
             return -1;
         } else {
             return list[index];
@@ -397,7 +403,7 @@ public class List {
                 if (tokens.length == 2) {
                 String[] t1 = tokens[1].split(",");
                 int temp[] = new int[t1.length];
-                for (int i = 0; i < temp.length; i++)
+                for (int i = 0; i < temp.length;i++)
                     temp[i]=Integer.parseInt(t1[i]);
                 l.addAll(temp);
                 }
