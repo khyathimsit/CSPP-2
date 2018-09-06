@@ -1,7 +1,22 @@
+/**.
+ * { item_description }
+ */
 import java.io.BufferedInputStream;
+/**.
+ * { item_description }
+ */
 import java.io.PrintStream;
+/**.
+ * { item_description }
+ */
 import java.util.Arrays;
+/**.
+ * { item_description }
+ */
 import java.util.Scanner;
+/**.
+ * { item_description }
+ */
 
 /*
      * The goal for the list is to store items.
@@ -14,7 +29,13 @@ import java.util.Scanner;
         actual type when the object got created. 
      */
 public class List<E> {
+	/**.
+	 * { var_description }
+	 */
     private E[] list;
+    /**.
+     * { var_description }
+     */
     private int size;
     //Constructor
     public List() {
@@ -23,7 +44,7 @@ public class List<E> {
         size = 0;
     }
     //Overloaded Constructor
-    public List(int param) {
+    public List(final int param) {
         list = ((E[])new Object[param]);
         size = 0;
     }
@@ -35,10 +56,10 @@ public class List<E> {
      * Think about how you can use the size variable to add item
      * to the list.
      */
-    public void add(E item) {
+    public void add(final E item) {
         //Inserts the specified element at the end of the list.
         //You can modify the code in this method.
-        if (size == list.length){
+        if (size == list.length) {
         	resize();
         }
         list[(size++)] = item;
@@ -51,9 +72,10 @@ public class List<E> {
     }
     /*Inserts all the elements of specified int 
     array to the end of list*/
-    public void addAll(E[] items) {
-        for(int i = 0; i < items.length; i++)
+    public void addAll(final E[] items) {
+        for (int i = 0; i < items.length; i++) {
             add(items[i]);
+        }
     }
     /*
      * The size method returns the value of the size.
@@ -85,9 +107,9 @@ public class List<E> {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public void remove(int index) {
-        if(index >= 0 && index < size) {
-            for(int i = index; i < size - 1; i++) {
+    public void remove(final int index) {
+        if (index >= 0 && index < size) {
+            for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
             size--;
@@ -106,7 +128,7 @@ public class List<E> {
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
      */
-    public E get(int index) {
+    public E get(final int index) {
         if (index < size) {
         	return list[index];
         } else {
@@ -135,11 +157,11 @@ public class List<E> {
      *
      */
     public String toString() {
-       if(size == 0)
+       if (size == 0)
             return "[]";
         String str = "[";
         int i = 0;
-        for(i = 0; i < size - 1; i++) {
+        for (i = 0; i < size - 1; i++) {
             str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
@@ -151,7 +173,7 @@ public class List<E> {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains(E item) {
+    public boolean contains(final E item) {
 		return indexOf(item) >= 0;
     }
     /*
@@ -159,9 +181,9 @@ public class List<E> {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf(E item) {
-       for(int i = 0; i < size; i++) {
-            if(item.equals(list[i])) {
+    public int indexOf(final E item) {
+       for (int i = 0; i < size; i++) {
+            if (item.equals(list[i])) {
                 return i;
             }
         }
