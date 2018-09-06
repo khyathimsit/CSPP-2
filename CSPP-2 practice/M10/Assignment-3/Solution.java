@@ -1,7 +1,7 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 //A Class is implemented for Student details
-/**
+/**.
 *Student
 */
 class Student {
@@ -14,9 +14,9 @@ class Student {
      *
      * @param      name  The name
      */
-    public Student(String name) {
+    Student(final String nme) {
     //A constructor used to initialize the instance variables
-        this.name = name;
+        this.name = nme;
     }
     /**
      * Gets the name.
