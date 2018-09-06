@@ -229,6 +229,8 @@ public class Solution {
                         System.out.println(listFloat.
                         contains(Float.parseFloat(tokens[1])));
                         break;
+                        default:
+                        break;
                     }
                 }
             break;
@@ -246,7 +248,7 @@ public class Solution {
                             listCharacter.add(tokens[1].charAt(0));
                         break;
                         case "addAll":
-                        if (tokens.length == 2){
+                        if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Character[] temp = new Character[t1.length];
                         for (int i = 0; i < t1.length; i++) {
@@ -296,13 +298,14 @@ public class Solution {
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
+                    // based on the list operation invoke
+                    // the corresponding method
                     switch (tokens[0]) {
                         case "add":
                             listDouble.add(Double.parseDouble(tokens[1]));
                         break;
                         case "addAll":
-                        if (tokens.length == 2){
+                        if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Double[] temp = new Double[t1.length];
                         for (int i = 0; i < t1.length; i++) {
@@ -318,7 +321,7 @@ public class Solution {
                         System.out.println(listDouble.size());
                         break;
                         case "print":
-                        // print the list (implement toString 
+                        // print the list (implement toString
                         // in StringList class for this to work)
                         // expected format is [item-1,item-2,...,item-n]
                         // review the output testcase file
@@ -399,6 +402,6 @@ public class Solution {
                     }
                 }
             break;
-        }   
+        }  
     }
 }
