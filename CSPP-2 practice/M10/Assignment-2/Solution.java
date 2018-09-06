@@ -1,5 +1,6 @@
 /**.
- * { item_description }
+ * Author: Khyathi.
+ * Date : 6-9-2018
  */
 import java.io.BufferedInputStream;
 /**.
@@ -9,8 +10,12 @@ import java.util.Scanner;
 /**.
  * Class for solution.
  */
-
-public class Solution {
+public final class Solution {
+    private Solution() {
+        /**.
+         * Constructor
+         */
+    }
     /**.
      * main function
      *
