@@ -80,10 +80,8 @@ public final class Solution {
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
-
         switch (objectType) {
             case "S"://This case will be executed for String type list
                 List<String> listString = new List();
@@ -124,7 +122,6 @@ public final class Solution {
                     }
                 }
             break;
-
             case "I"://This case will be executed for Integer type list
                 List<Integer> listInteger = new List();
                 while (stdin.hasNext()) {
@@ -170,7 +167,6 @@ public final class Solution {
                     }
                 }
             break;
-
             case "F"://This case will be executed for Float type list
                 List<Float> listFloat = new List();
                 while (stdin.hasNext()) {
@@ -216,19 +212,15 @@ public final class Solution {
                     }
                 }
             break;
-
             case "C"://This case will be executed for Character type list
             performCharacter(stdin);
             break;
-
             case "D"://This case will be executed for Double type list
             performDouble(stdin);
             break;
-            
             case "O":
             performStudent(stdin);
             break;
-            
             default:
             break;
         }
