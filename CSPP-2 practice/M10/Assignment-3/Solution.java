@@ -283,9 +283,11 @@ public class Solution {
 		                case "contains":
 		                System.out.println(listDouble.contains(Double.parseDouble(tokens[1])));
 		                break;
+		                default:
+		                break;
 		            }
 		        }
-	        break;
+	        
 
 	        case "O"://This case will be executed for Student type list i.e to store List of Student Objects
 	        	List<Student> listStudent = new List();
@@ -334,11 +336,10 @@ public class Solution {
 		                System.out.println(listStudent.
 		                contains(new Student(tokens[1])));
 		                break;
+		                default:
+	                    break;
 		            }
 		        }
-	        	break;
-	        default:
-	        break;
-    	}
+	        }
+	    }    
 	}
-}
