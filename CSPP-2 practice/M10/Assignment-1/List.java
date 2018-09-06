@@ -16,7 +16,7 @@ import java.util.Arrays;
 
 public class List {
     //Implement all the methods mentioned to build a ListADT
-
+    private static final int N = 10;
     /*
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
@@ -62,7 +62,7 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
 
     // declare a private int size
@@ -85,7 +85,7 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        list = new int[N];
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
@@ -178,10 +178,10 @@ public class List {
      *
      * The method returns an int. Empty list should return 0.
      */
+    /**.
+    size
+    */
     public int size() {
-        /**.
-         * { item_description }
-         */
         return size;
     }
     /*
