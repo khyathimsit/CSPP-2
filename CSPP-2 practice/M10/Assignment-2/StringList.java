@@ -121,6 +121,9 @@ public class StringList implements StringListInterface{
      */
     public void add(String item) {
         //Inserts the specified element at the end of the list.
+        if (size == list.length){
+            resize();
+        }
        list[size] = item;
        size += 1;
     }
@@ -251,5 +254,8 @@ public class StringList implements StringListInterface{
             }
         }
         return -1;
+    }
+    private void resize() {
+        list = Arrays.copyOf(list, size * 2);
     }
 }
