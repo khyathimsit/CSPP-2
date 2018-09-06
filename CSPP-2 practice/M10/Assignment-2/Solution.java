@@ -11,6 +11,9 @@ import java.util.Scanner;
  * Class for solution.
  */
 public final class Solution {
+    /**.
+     * Constructs the object.
+     */
     private Solution() {
         /**.
          * Constructor
@@ -21,10 +24,11 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         StringList sl = new StringList();
-        StringListInterface l = (StringListInterface)sl;//Typecasting is done for StringListInterface
+        StringListInterface l = (StringListInterface) sl;
+        //Typecasting is done for StringListInterface
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         // check if there is one more line to process
@@ -39,7 +43,7 @@ public final class Solution {
                     l.add(tokens[1]);
                 break;
                 case "addAll":
-                if(tokens.length == 2){
+                if (tokens.length == 2) {
                 String[] t1 = tokens[1].split(",");
                 l.addAll(t1);
                 }
@@ -68,6 +72,8 @@ public final class Solution {
                 break;
                 case "contains":
                 System.out.println(l.contains(tokens[1]));
+                break;
+                default:
                 break;
             }
         }
