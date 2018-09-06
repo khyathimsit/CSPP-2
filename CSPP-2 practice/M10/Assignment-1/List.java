@@ -16,8 +16,11 @@ import java.util.Arrays;
 
 public class List {
     //Implement all the methods mentioned to build a ListADT
-    private static final int N = 10;
     /**.
+    List class
+    */
+    private static final int N = 10;
+    /**
      * Replacing the value of 10 to remove the magic number error
      */
     /*
