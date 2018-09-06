@@ -225,7 +225,7 @@ public final class Solution {
             break;
         }
     }
-    /**
+    /**.
      * Implementation of Student function in switch case
      *
      * @param      stdin  The stdin
@@ -276,7 +276,7 @@ public final class Solution {
             }
         }
     }
-    /**
+    /**.
      * Implementation of double function in switch
      *
      * @param      stdin  The stdin
@@ -326,7 +326,7 @@ public final class Solution {
             }
         }
     }
-    /**
+    /**.
      * Implementation of char function in switch
      *
      * @param      stdin  The stdin
@@ -377,3 +377,4 @@ public final class Solution {
                 }
     }
 }
+
