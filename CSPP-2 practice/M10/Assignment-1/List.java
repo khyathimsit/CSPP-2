@@ -261,8 +261,9 @@ public class List {
      * @return     String representation of the object.
      */
     public String toString() {
-        if(size == 0)
+        if(size == 0) {
             return "[]";
+        }
         String str = "[";
         int i = 0;
         for(i = 0; i < size - 1; i++) {
@@ -303,8 +304,9 @@ public class List {
      */
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
-            if (item == list[i])
+            if (item == list[i]) {
                 return i;
+            }
         }
         return -1;
     }
@@ -313,15 +315,15 @@ public class List {
     /**.
      * { item_description }
      */
-    public void addAll(final int items[])
-    {
-        for (int i = 0; i < items.length; i++)
+    public void addAll(final int[] items) {
+        for (int i = 0; i < items.length; i++) {
             add(items[i]);
+        }
     }
 
-     /* 
-        Inserts the specified element at the specified index 
-    by moving all the elements to the right.
+     /*
+        Inserts the specified element at the specified index
+        by moving all the elements to the right
         The method returns void (nothing)
      */
     /**.
@@ -350,8 +352,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int count(final int item)
-    {
+    public int count(final int item) {
          int cnt = 0;
         for (int i = 0; i < size; i++) {
             if (item == list[i]) {
@@ -433,6 +434,8 @@ public class List {
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+                default:
                 break;
             }
         }
