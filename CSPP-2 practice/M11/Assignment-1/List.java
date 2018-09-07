@@ -343,10 +343,10 @@ public class List {
     	}
     	for (int i = 0; i < size; i++) {
     		if (list.contains(this.list[i])) {
-    			return false;
+    			return true;
     		} 
     	}
-    	return true;
+    	return false;
     }
     /*
     * Removes all the elements from list
