@@ -290,7 +290,7 @@ public class List {
     *
     * @param      newArray  Array from which the elements to be removed
     */
-     public void removeAll(int[] newArray) {
+     public void removeAll(final int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
         	int index = indexOf(newArray[i]);
         	if (index != -1) {
@@ -313,7 +313,7 @@ public class List {
      *
      * @return     list
      */
-    public List subList(int start, int end) {
+    public List subList(final int start, final int end) {
     	List sublist = new List();
     	if (start < 0 || end < 0 || start > end) {
     		System.out.println("Index Out of Bounds Exception");
@@ -323,14 +323,14 @@ public class List {
     			sublist.add(get(i));
     		}
     		return sublist;
-    	} 
+    	}
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
     /**.
-     * { function_description }
+     * function to compare the lists
      *
      * @param      list  The list
      *
@@ -357,17 +357,16 @@ public class List {
      */
     public void clear()
     {
-    // write the logic for clear.
     	size = 0;
     }
     /**.
-     * { function_description }
+     * resize function
      */
     public void resize() {
     	list = Arrays.copyOf(list, size * 2);
     }
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -382,7 +381,7 @@ public class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
-                    if (tokens.length == 2){
+                    if (tokens.length == 2) {
                         String[] t = tokens[1].split(",");
                         if (t.length == 1) {
                             l.add(Integer.parseInt(tokens[1]));
@@ -422,8 +421,8 @@ public class List {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         int[] temp = new int[t1.length];
-                        for(int i = 0; i < temp.length; i++) {
-                            temp[i]=Integer.parseInt(t1[i]);
+                        for (int i = 0; i < temp.length; i++) {
+                            temp[i] = Integer.parseInt(t1[i]);
                         }
                         l.addAll(temp);
                     }
@@ -438,19 +437,22 @@ public class List {
                     }
                 break;
                 case "subList": {
-                    if (tokens.length != 2) break;
+                    if (tokens.length != 2) {
+                    	break;
+                    }
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
                             Integer.parseInt(arrstring3[1]));
-                    if (object != null) 
+                    if (object != null) {
                         System.out.println(object);
+                    }
                     break;
                 }
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
                         List l2 = new List();
-                        for (int k = 0; k < lt.length; k++ ) {
+                        for (int k = 0; k < lt.length; k++) {
                             l2.add(Integer.parseInt(lt[k]));
                         }
                         System.out.println(l.equals(l2));
