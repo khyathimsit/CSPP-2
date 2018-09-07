@@ -194,7 +194,7 @@ public class List {
      * @return     { description_of_the_return_value }
      */
     public int get(final int index) {
-        if (index < 0 || index >= size) {
+        if (index < 0 && index >= size) {
             return -1;
         } else {
             return list[index];
@@ -229,9 +229,9 @@ public class List {
             str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
-        if (list[0] == 0) {
-            str += "\nInvalid Position Exception";
-        }
+        // if (list[0] == 0) {
+        //     str += "\nInvalid Position Exception";
+        // }
         return str;
     }
     /*
@@ -316,10 +316,15 @@ public class List {
     public List subList(int start, int end) 
     {
     	List sublist = new List();
-    	for (int i = start; i < end; i++) {
-    		sublist.add(get(i));
-    	}
-    	return sublist;
+    	if (start < 0 || end < 0 || start > end) {
+    		System.out.println("Index Out of Bounds Exception");
+    		return null;
+    	} else {
+    		for (int i = start; i < end; i++) {
+    			sublist.add(get(i));
+    		}
+    		return sublist;
+    	} 
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
@@ -333,12 +338,15 @@ public class List {
      * @return     { description_of_the_return_value }
      */
     public boolean equals(List list) {
-    	for (int i = 0; i < list.size; i++) {
-    		if (this.contains(get(i))) {
-    			return true;
-    		}
+    	if (size() != list.size()) {
+    		return false;
     	}
-    	return false;
+    	for (int i = 0; i < size; i++) {
+    		if (list.contains(this.list[i])) {
+    			return false;
+    		} 
+    	}
+    	return true;
     }
     /*
     * Removes all the elements from list
