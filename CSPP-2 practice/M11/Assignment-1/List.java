@@ -314,12 +314,11 @@ public class List {
      *
      * @return     list
      */
-    public List subList(int start, int end) {
-    	
-    	if ( start > size || end > size) {
-    		System.out.println("Index Out of Bounds Exception");
-    		return null;
-    	}
+    public List subList(final int start, final int end) {
+        if (start > size || end > size) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        }
         if (start < 0 || end < 0) {
             System.out.println("Index Out of Bounds Exception");
             return null;
@@ -327,13 +326,13 @@ public class List {
         if (start > end) {
             System.out.println("Index Out of Bounds Exception");
             return null;
-        } 
+        }
         if (start == end) {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
         List sublist = new List(end - start);
-        for(int i = start; i < end; i++) {
+        for (int i = start; i < end; i++) {
             sublist.add(this.get(i));
         }
         return sublist;
@@ -345,12 +344,12 @@ public class List {
     /**.
      * function to compare the lists
      *
-     * @param      l  The list
+     * @param      list  The list
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(List list ) {
-    	return this.toString().equals(list.toString());
+    public boolean equals(final List list) {
+        return this.toString().equals(list.toString());
     }
     /*
     * Removes all the elements from list
@@ -446,7 +445,7 @@ public class List {
                         l.removeAll(a);
                     }
                 break;
-                case "subList": {
+                case "subList":
                     if (tokens.length != 2) {
                         break;
                     }
@@ -456,8 +455,7 @@ public class List {
                     if (object != null) {
                         System.out.println(object);
                     }
-                    break;
-                }
+                break;
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
