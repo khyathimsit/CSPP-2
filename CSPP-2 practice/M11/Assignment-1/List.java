@@ -91,12 +91,12 @@ public class List {
         // private variables described above. What should be the default values?
         // In the case of the list, it should be empty but it should be
         // initialized with an array size like 10
-    	list = new int[N];
+        list = new int[N];
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-    	size = 0;
+        size = 0;
     }
 
     /**.
@@ -108,7 +108,6 @@ public class List {
         size = 0;
         list = new int[capacity];
     }
-    
     /*
      * The add method does what the name suggests. Add an int item to the list.
      * The assumption is to store the item at the end of the list What is the
@@ -292,10 +291,10 @@ public class List {
     */
      public void removeAll(final int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
-        	int index = indexOf(newArray[i]);
-        	if (index != -1) {
-        	    remove(index);
-        	}
+            int index = indexOf(newArray[i]);
+            if (index != -1) {
+                remove(index);
+            }
         }
     }
     /*
@@ -314,16 +313,16 @@ public class List {
      * @return     list
      */
     public List subList(final int start, final int end) {
-    	List sublist = new List();
-    	if (start < 0 || end < 0 || start > end) {
-    		System.out.println("Index Out of Bounds Exception");
-    		return null;
-    	} else {
-    		for (int i = start; i < end; i++) {
-    			sublist.add(get(i));
-    		}
-    		return sublist;
-    	}
+        List sublist = new List();
+        if (start < 0 || end < 0 || start > end) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        } else {
+            for (int i = start; i < end; i++) {
+                sublist.add(get(i));
+            }
+            return sublist;
+        }
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
@@ -336,16 +335,16 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(List list) {
-    	if (size() != list.size()) {
-    		return false;
-    	}
-    	for (int i = 0; i < size; i++) {
-    		if (list.contains(this.list[i])) {
-    			return false;
-    		} 
-    	}
-    	return true;
+    public boolean equals(final List l) {
+        if (size() != l.size()) {
+            return false;
+        }
+        for (int i = 0; i < size; i++) {
+            if (l.contains(this.list[i])) {
+                return false;
+            }
+        }
+        return true;
     }
     /*
     * Removes all the elements from list
@@ -355,17 +354,20 @@ public class List {
     /**.
      * function to remove all the elements in the list
      */
-    public void clear()
-    {
-    	size = 0;
+    public void clear() {
+        size = 0;
     }
     /**.
      * resize function
      */
     public void resize() {
-    	list = Arrays.copyOf(list, size * 2);
+        list = Arrays.copyOf(list, size * 2);
     }
-
+    /**.
+     * Main function
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
@@ -431,14 +433,15 @@ public class List {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         int[] a = new int[t2.length];
-                        for(int i = 0; i < t2.length; i++)
+                        for (int i = 0; i < t2.length; i++) {
                             a[i] = Integer.parseInt(t2[i]);
+                        }
                         l.removeAll(a);
                     }
                 break;
                 case "subList": {
                     if (tokens.length != 2) {
-                    	break;
+                        break;
                     }
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
