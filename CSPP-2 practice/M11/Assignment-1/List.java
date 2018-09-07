@@ -292,8 +292,9 @@ public class List {
      public void removeAll(final int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             int index = indexOf(newArray[i]);
-            if (index != -1) {
+            while (index != -1) {
                 remove(index);
+                index = indexOf(newArray[i]);
             }
         }
     }
@@ -305,6 +306,7 @@ public class List {
     and also if start is greater than end.
     */
     /**.
+     *
      * Function to print the sub list from the given list
      *
      * @param      start  starting position of the sublist
@@ -313,16 +315,27 @@ public class List {
      * @return     list
      */
     public List subList(final int start, final int end) {
+    	if (start > size || end > size) {
+    		System.out.println("Index Out of Bounds Exception");
+    		return null;
+    	}
+    	if (start < 0 || end < 0) {
+    		System.out.println("Index Out of Bounds Exception");
+    		return null;
+    	}
+    	if (start > end) {
+    		System.out.println("Index Out of Bounds Exception");
+    		return null;
+    	}
+    	if (start == end) {
+    		System.out.println("Index Out of Bounds Exception");
+    		return null;
+    	}
         List sublist = new List();
-        if (start < 0 || end < 0 || start > end) {
-            System.out.println("Index Out of Bounds Exception");
-            return null;
-        } else {
-            for (int i = start; i < end; i++) {
-                sublist.add(get(i));
-            }
-            return sublist;
+        for (int i = start; i < end; i++) {
+                sublist.add(this.get(i));
         }
+        return sublist;
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
@@ -336,15 +349,7 @@ public class List {
      * @return     { description_of_the_return_value }
      */
     public boolean equals(final List l) {
-        if (size() != l.size()) {
-            return false;
-        }
-        for (int i = 0; i < size; i++) {
-            if (l.contains(this.list[i])) {
-                return false;
-            }
-        }
-        return true;
+        return this.toString().equals(list.toString());
     }
     /*
     * Removes all the elements from list
@@ -356,6 +361,7 @@ public class List {
      */
     public void clear() {
         size = 0;
+        list = new int[N];
     }
     /**.
      * resize function
