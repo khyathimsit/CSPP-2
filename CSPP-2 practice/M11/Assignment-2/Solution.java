@@ -1,17 +1,46 @@
+/**.
+ * Author: khyathi
+ */
+/**
+ * Buffered stream
+ */
 import java.io.BufferedInputStream;
+/**
+ * Scanner class
+ */
 import java.util.Scanner;
 //A Class is implemented for Student details
 class Student {
+    /**
+     * Student class
+     */
+    /**.
+     * name - String
+     */
     private String name;
-
-    public Student(String name) {
+    /**
+     * Constructs the object.
+     *
+     * @param      name  The name
+     */
+    public Student(final String name) {
         this.name = name;
     }
-
+    /**
+     * Gets the name.
+     *
+     * @return     The name.
+     */
     public String getName() {
         return this.name;
     }
-
+    /**
+     * checks whether the object is equal or not
+     *
+     * @param      other  The other
+     *
+     * @return     { description_of_the_return_value }
+     */
     @Override
     public boolean equals(Object other) {
         if (!(other instanceof Student)) {
@@ -21,15 +50,27 @@ class Student {
         Student that = (Student) other;
         return this.getName().equals(that.getName());
     }
-
+    /**.
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         return this.name;
     }
 }
-/**
+/**.
  * SOlution class
  */
 public final class Solution {
+    /**.
+     * Constructs the object.
+     */
+    private Solution() {
+        /**.
+         * Class constructor
+         */
+    }
     /**.
      * List Integer
      *
@@ -95,8 +136,9 @@ public final class Solution {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         Integer[] a = new Integer[t2.length];
-                        for (int i = 0; i < t2.length; i++)
+                        for (int i = 0; i < t2.length; i++) {
                             a[i] = Integer.parseInt(t2[i]);
+                        }
                         l.removeAll(a);
                     }
                 break;
@@ -194,8 +236,9 @@ public final class Solution {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         Double[] a = new Double[t2.length];
-                        for (int i = 0; i < t2.length; i++)
+                        for (int i = 0; i < t2.length; i++) {
                             a[i] = Double.parseDouble(t2[i]);
+                        }
                         l.removeAll(a);
                     }
                 break;
