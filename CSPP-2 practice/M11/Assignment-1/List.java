@@ -314,26 +314,27 @@ public class List {
      *
      * @return     list
      */
-    public List subList(final int start, final int end) {
-    	if (start > size || end > size) {
+    public List subList(int start, int end) {
+    	
+    	if ( start > size || end > size) {
     		System.out.println("Index Out of Bounds Exception");
     		return null;
     	}
-    	if (start < 0 || end < 0) {
-    		System.out.println("Index Out of Bounds Exception");
-    		return null;
-    	}
-    	if (start > end) {
-    		System.out.println("Index Out of Bounds Exception");
-    		return null;
-    	}
-    	if (start == end) {
-    		System.out.println("Index Out of Bounds Exception");
-    		return null;
-    	}
-        List sublist = new List();
-        for (int i = start; i < end; i++) {
-                sublist.add(this.get(i));
+        if (start < 0 || end < 0) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        }
+        if (start > end) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        } 
+        if (start == end) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        }
+        List sublist = new List(end - start);
+        for(int i = start; i < end; i++) {
+            sublist.add(this.get(i));
         }
         return sublist;
     }
@@ -348,8 +349,8 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(final List l) {
-        return this.toString().equals(list.toString());
+    public boolean equals(List list ) {
+    	return this.toString().equals(list.toString());
     }
     /*
     * Removes all the elements from list
