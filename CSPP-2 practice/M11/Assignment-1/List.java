@@ -344,12 +344,12 @@ public class List {
     /**.
      * function to compare the lists
      *
-     * @param      list  The list
+     * @param      l  The list
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(final List list) {
-        return this.toString().equals(list.toString());
+    public boolean equals(final List l) {
+        return this.toString().equals(l.toString());
     }
     /*
     * Removes all the elements from list
