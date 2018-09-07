@@ -10,10 +10,10 @@ import java.io.BufferedInputStream;
  */
 import java.util.Scanner;
 //A Class is implemented for Student details
+/**.
+*Student class
+*/
 class Student {
-    /**
-     * Student class
-     */
     /**.
      * name - String
      */
@@ -21,12 +21,12 @@ class Student {
     /**
      * Constructs the object.
      *
-     * @param      name  The name
+     * @param      n  The name
      */
-    public Student(final String name) {
-        this.name = name;
+    protected Student(final String n) {
+        this.name = n;
     }
-    /**
+    /**.
      * Gets the name.
      *
      * @return     The name.
@@ -34,15 +34,15 @@ class Student {
     public String getName() {
         return this.name;
     }
-    /**
-     * checks whether the object is equal or not
+    /**.
+     * checks whether the object is equal or not.
      *
      * @param      other  The other
      *
      * @return     { description_of_the_return_value }
      */
     @Override
-    public boolean equals(Object other) {
+    public boolean equals(final Object other) {
         if (!(other instanceof Student)) {
             return false;
         }
