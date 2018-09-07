@@ -313,8 +313,7 @@ public class List {
      *
      * @return     list
      */
-    public List subList(int start, int end) 
-    {
+    public List subList(int start, int end) {
     	List sublist = new List();
     	if (start < 0 || end < 0 || start > end) {
     		System.out.println("Index Out of Bounds Exception");
@@ -343,10 +342,10 @@ public class List {
     	}
     	for (int i = 0; i < size; i++) {
     		if (list.contains(this.list[i])) {
-    			return true;
+    			return false;
     		} 
     	}
-    	return false;
+    	return true;
     }
     /*
     * Removes all the elements from list
