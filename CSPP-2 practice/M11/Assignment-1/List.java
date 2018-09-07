@@ -246,7 +246,7 @@ public class List {
      * @return     { description_of_the_return_value }
      */
     public boolean contains(final int item) {
-        return indexOf(item) == -1;
+        return indexOf(item) > -1;
     }
     /*
      * Returns the index of the first occurrence of the specified element in
