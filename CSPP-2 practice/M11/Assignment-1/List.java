@@ -84,7 +84,7 @@ public class List {
      */
     /**.
      * Constructs the object.
-     */    
+     */
     public List() {
 
         // what are the two variables to be initialized here? think about the
@@ -128,7 +128,7 @@ public class List {
         }
         list[size++] = item;
     }
-    
+
     /*
      * The size method returns the value of the size. The purpose of the method
      * is to announce the size of the list to the objects outside the list
@@ -268,7 +268,7 @@ public class List {
         return -1;
     }
     /*
-    Inserts all the elements of specified int array to the end of list    
+    Inserts all the elements of specified int array to the end of list
     */
     /**.
      * Adds all.
@@ -281,8 +281,8 @@ public class List {
         }
     }
     /*
-     Removes all of its elements that are contained in the specified int 
-     array.    
+     Removes all of its elements that are contained in the specified int
+     array.
     */
     /**.
     * Removes all elements in the new array
@@ -300,7 +300,7 @@ public class List {
     /*
     Returns a list object containing elements, including startIndex and
     excluding endIndex. The first parameter indicates the startIndex and the
-    second parameter indicates the endIndex. Returns null and print 
+    second parameter indicates the endIndex. Returns null and print
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
     */
@@ -331,7 +331,7 @@ public class List {
     /**.
      * function to compare the lists
      *
-     * @param      list  The list
+     * @param      l  The list
      *
      * @return     { description_of_the_return_value }
      */
