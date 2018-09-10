@@ -16,29 +16,180 @@ import java.util.Arrays;
  * @author : 
  */
 class Set {
-    /**.
-     * Array declaration
+    /**
+     * This constant is used to create an array
+     * with the initial capacity.
      */
-    public int[] intArray;
+    public static final int TEN = 10;
     /**.
      * Set decalaration
      */
-    public Set[] set;
+    public int[] set;
     /**
      * Size
      */
     public int size;
+    public Set() {
+        set = new int[10];
+        size = 0;
+    }
+    /**
+     * Function to add all the elements into the set
+     *
+     * @param      item  The item
+     */
+    public void add(final int item) {
+        if (size == set.length) {
+            resize();
+        }
+        if (!contains(item)) {
+            set[size++] = item;
+        }
+    }
+    /**
+     * Function to resize the set by double.
+     */
+    private void resize() {
+        set = Arrays.copyOf(set, size * 2);
+    }
+    /**
+     * adds all the elements of the array to the set
+     *
+     * @param      arr   The arr
+     */
+    public void add(final int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            add(arr[i]);
+        }
+    }
+    /**
+     * Function to find yhe intersection of two sets
+     *
+     * @param  other  { parameter_description }
+     *
+     * @return   the result that contains the common
+     * elements of the two sets.
+     */
+    public Set intersection(Set other) {
+        Set result = new Set();
+        for (int i = 0; i < this.size; i++) {
+            if (other.contains(this.get(i))) {
+                result.add(this.get(i));
+            }
+        }
+        return result;
+    }
+    /**
+     * retains all the elements from the set.
+     *
+     * @param      arr   The arr
+     *
+     * @return the set that contains all the elements
+     * of this set.
+     */
+    public Set retainAll(final int[] arr) {
+        Set result1 = new Set();
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                if (arr[j] == set[i]) {
+                    result1.add(set[i]);
+                }
+            }
+            
+        }
+        return result1;
+    }
+    /**
+     * Function to find out the cartesian product of two sets.
+     *
+     * @param      other  The other
+     *
+     * @return   product in the form of 2D array.
+     */
+    public int[][] cartesianProduct(final Set other) {
+        int [][] result = new int[this.size() * other.size()][2];
+        int k = 0;
+        if (this.size() == 0 || other.size() == 0) {
+            return null;
+        }
+        for (int i = 0; i < this.size(); i++) {
+            for (int j = 0; j < other.size(); j++) {
+                result[k][0] = this.get(i);
+                result[k][1] = other.get(j);
+            }
+        }
+        return result;
+    }
+    /**.
+     * Size function
+     *
+     * @return  int(size)
+     */
+    public int size() {
+        return size;
+    }
+    /**.
+     * Function to find the item is in list or not
+     *
+     * @param      item  The item
+     *
+     * @return     true or false
+     */
+    public boolean contains(final int item) {
+        return indexOf(item) != -1;
+    }
+    /**.
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     index of the required item
+     */
+    public int indexOf(final int item) {
+        for (int i = 0; i < size; i++) {
+            if (item == set[i]) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    /**.
+     * get function
+     *
+     * @param      index  The index
+     *
+     * @return     value at the specified index.
+     */
+    public int get(final int index) {
+        if (index < 0 && index >= this.size()) {
+            return -1;
+        } else {
+            return set[index];
+        }
+    }
+    /**
+     * String version of the object.
+     *
+     * @return     String representation of the object.
+     */
+    public String toString() {
+        if (size == 0) {
+            return "{}";
+        }
+        String str = "{";
+        int i = 0;
+        for (i = 0; i < size - 1; i++) {
+            str = str + set[i] + ",";
+        }
+        str = str + set[i] + "}";
+        return str.toString();
+    }
+
 }
 /**
  * Solution class for code-eval.
  */
 public final class Solution {
-    /**
-     * Constructs the object.
-     */
-    private Solution() {
-        set = new Set[10];
-    }
     /**
      * helper function to convert string input to int array.
      *
@@ -58,96 +209,6 @@ public final class Solution {
                             .mapToInt(Integer::parseInt)
                             .toArray();
     }
-    /**.
-     * Size function
-     *
-     * @return  int(size)
-     */
-    public int size() {
-        return size;
-    }
-    /**.
-     * FUnction to find the item is in list or not
-     *
-     * @param      item  The item
-     *
-     * @return     true or false
-     */
-    public boolean contains(final int item) {
-        return indexOf(item) > -1;
-    }
-    /**.
-     * Searches for the first match.
-     *
-     * @param      item  The item
-     *
-     * @return     index of the required item
-     */
-    public int indexOf(final int item) {
-        for (int i = 0; i < size; i++) {
-            if (item == intArray[i]) {
-                return i;
-            }
-        }
-        return -1;
-    }
-    /**.
-     * get function
-     *
-     * @param      index  The index
-     *
-     * @return     value at the specified index.
-     */
-    public int get(final int index) {
-        if (index < 0 && index >= size) {
-            return -1;
-        } else {
-            return intArray[index];
-        }
-    }
-
-    public String toString() {
-        if (size == 0) {
-            return "{}";
-        }
-        String str = "{";
-        int i = 0;
-        for (i = 0; i < size - 1; i++) {
-            str = str + intArray[i] + ",";
-        }
-        str = str + intArray[i] + "}";
-        return str;
-    }
-
-    public void add(final int item) {
-        intArray[size] = item;
-        size += 1;
-    }
-     
-    public void addAll(final int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            add(arr[i]);
-        }
-    }
-
-    public Set intersection(final set[] s) {
-        for (int i = 0; i < s.length; i++) {
-            if (intArray[i] == s[i]) {
-                intersection.add(this.get(i));
-            }
-        }
-        return intersection;
-    }
-
-    public Set retainAll(final set[] s) {
-        for (int i = 0; i < s.length; i++) {
-            if (intArray[i] == s[i]) {
-                retainAll.add(this.get(i));
-            }
-        }
-        return retainAll;
-    }
-    
     /**
      * main function to execute test cases.
      *
@@ -176,17 +237,12 @@ public final class Solution {
                 System.out.println(s);
                 break;
                 case "add":
-                    s.add(Integer.parseInt(tokens[1]));
-                break;
-                case "addAll":
-                    if (tokens.length == 2) {
-                        String[] t1 = tokens[1].split(",");
-                        int[] temp = new int[t1.length];
-                        for (int i = 0; i < temp.length; i++) {
-                            temp[i] = Integer.parseInt(t1[i]);
-                        }
-                        s.addAll(temp);
-                    }
+                int[] intArray = intArray(tokens[1]);
+                if (intArray.length == 1) {
+                    s.add(intArray[0]);
+                } else {
+                    s.add(intArray);
+                }
                 break;
                 case "intersection":
                 s = new Set();
@@ -219,3 +275,9 @@ public final class Solution {
         }
     }
 }
+
+    
+    
+    
+    
+    
