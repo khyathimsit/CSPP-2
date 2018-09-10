@@ -116,6 +116,7 @@ class Set {
             for (int j = 0; j < other.size(); j++) {
                 result[k][0] = this.get(i);
                 result[k][1] = other.get(j);
+                k++;
             }
         }
         return result;
