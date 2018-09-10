@@ -16,7 +16,7 @@ import java.util.Arrays;
  * @author : Khyathi
  */
 class Sortedset extends Set {
-    /**
+    /**.
      * Function to find the last element in the set
      *
      * @return  item in the set
@@ -29,7 +29,7 @@ class Sortedset extends Set {
             return get(size() - 1);
         }
     }
-    /**
+    /**.
      * Function to get the elements from start to  given to element
      *
      * @param      toele  The toele
@@ -39,7 +39,7 @@ class Sortedset extends Set {
     public int[] headset(final int toele) {
         return subSet(get(0), toele);
     }
-    /**
+    /**.
      * Function to find the subset from the list
      */
     public int[] subSet(int fromele, int toele) {
@@ -63,7 +63,7 @@ class Sortedset extends Set {
         }
         return subset;
     }
-    /**
+    /**.
      * Add function to add the elements into the set
      *
      * @param      item  The item
@@ -74,7 +74,7 @@ class Sortedset extends Set {
             add(index, item);
         }
     }
-    /**
+    /**.
      * Gets the index.
      *
      * @param      item  The item
