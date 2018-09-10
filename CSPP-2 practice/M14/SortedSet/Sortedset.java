@@ -39,8 +39,13 @@ class Sortedset extends Set {
     public int[] headset(final int toele) {
         return subSet(get(0), toele);
     }
-    /**.
-     * Function to find the subset from the list
+    /**
+     * Subset function
+     *
+     * @param      fromele  The fromele
+     * @param      toele    The toele
+     *
+     * @return  array
      */
     public int[] subSet(final int fromele, final int toele) {
         // if (fromele > toele) {
