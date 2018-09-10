@@ -42,7 +42,7 @@ class Sortedset extends Set {
     /**.
      * Function to find the subset from the list
      */
-    public int[] subSet(int fromele, int toele) {
+    public int[] subSet(final int fromele, final int toele) {
         // if (fromele > toele) {
         //     System.out.println("Invalid Arguments to Subset Exception");
         //     return null;
@@ -68,7 +68,7 @@ class Sortedset extends Set {
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         if (!contains(item)) {
             int index = getIndex(item);
             add(index, item);
@@ -81,7 +81,7 @@ class Sortedset extends Set {
      *
      * @return     The index.
      */
-    public int getIndex(int item) {
+    public int getIndex(final int item) {
         for (int i = 0; i < size(); i++) {
             if (item <= this.get(i)) {
                 return i;
