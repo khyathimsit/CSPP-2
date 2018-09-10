@@ -39,7 +39,7 @@ class Sortedset extends Set {
     public int[] headset(final int toele) {
         return subSet(get(0), toele);
     }
-    /**
+    /**.
      * Subset function
      *
      * @param      fromele  The fromele
