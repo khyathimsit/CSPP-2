@@ -41,6 +41,9 @@ class InvalidSubsetSelectionException extends Exception {
         super(s);
     }
 }
+/**.
+ * Class for sortedset.
+ */
 class Sortedset extends Set {
     /**.
      * Function to find the last element
