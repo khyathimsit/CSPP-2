@@ -46,11 +46,11 @@ class InvalidSubsetSelectionException extends Exception {
  */
 class Sortedset extends Set {
     /**.
-     * Function to find the last element
+     * { function_description }
      *
      * @return     { description_of_the_return_value }
      *
-     * @throws     SetEmptyException
+     * @throws     SetEmptyException  { exception_description }
      */
     public int last() throws SetEmptyException {
         if (size() == 0) {
@@ -62,7 +62,7 @@ class Sortedset extends Set {
     /**.
      * { function_description }
      *
-     * @param      toele
+     * @param      toele  The toele
      *
      * @return     { description_of_the_return_value }
      *
