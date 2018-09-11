@@ -159,9 +159,11 @@ public class List {
      *
      */
     /**.
-     * { function_description }
+     * Remove function
      *
-     * @param      index  The index
+     * @param      index      The index
+     *
+     * @throws     Exception  { exception_description }
      */
     public void remove(final int index) throws Exception {
         // write the logic for remove here.
@@ -281,15 +283,13 @@ public class List {
             add(items[i]);
         }
     }
-    /*
-     Removes all of its elements that are contained in the specified int
-     array.
-    */
     /**.
-    * Removes all elements in the new array
-    *
-    * @param      newArray  Array from which the elements to be removed
-    */
+     * Removes all.
+     *
+     * @param      newArray   The new array
+     *
+     * @throws     Exception  { exception_description }
+     */
      public void removeAll(final int[] newArray) throws Exception {
         for (int i = 0; i < newArray.length; i++) {
             int index = indexOf(newArray[i]);
@@ -307,13 +307,14 @@ public class List {
     and also if start is greater than end.
     */
     /**.
+     * Sublist function
      *
-     * Function to print the sub list from the given list
+     * @param      start      The start
+     * @param      end        The end
      *
-     * @param      start  starting position of the sublist
-     * @param      end    ending position of the sublist
+     * @return     { description_of_the_return_value }
      *
-     * @return     list
+     * @throws     Exception  { exception_description }
      */
     public List subList(final int start, final int end) throws Exception {
         if (start > size || end > size) {
@@ -374,7 +375,7 @@ public class List {
     public void resize() {
         list = Arrays.copyOf(list, size * 2);
     }
-    /**
+    /**.
      * count function
      *
      * @param      item  The item
