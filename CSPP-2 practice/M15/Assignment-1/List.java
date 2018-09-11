@@ -313,7 +313,7 @@ public class List {
      * @param      end        The end
      *
      * @return     { description_of_the_return_value }
-     *             
+     *
      * @throws     Exception  { exception_description }
      */
     public List subList(final int start, final int end) throws Exception {
