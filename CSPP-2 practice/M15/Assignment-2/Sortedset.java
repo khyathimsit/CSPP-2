@@ -50,7 +50,7 @@ class Sortedset extends Set {
      *
      * @return     { description_of_the_return_value }
      *
-     * @throws     Set   { exception_description }
+     * @throws     SetEmptyException
      */
     public int last() throws SetEmptyException {
         if (size() == 0) {
@@ -60,13 +60,14 @@ class Sortedset extends Set {
         }
     }
     /**.
-     * head set function
+     * { function_description }
      *
-     * @param      toele              The toele
+     * @param      toele
      *
      * @return     { description_of_the_return_value }
      *
-     * @throws     SetEmptyException  { exception_description }
+     * @throws     SetEmptyException                { exception_description }
+     * @throws     InvalidSubsetSelectionException  { exception_description }
      */
     public int[] headset(final int toele) throws SetEmptyException,
                          InvalidSubsetSelectionException {
@@ -86,11 +87,11 @@ class Sortedset extends Set {
      *
      * @throws     InvalidSubsetSelectionException  { exception_description }
      */
-    public int[] subSet(final int fromele, final int toele) throws 
-                            InvalidSubsetSelectionException { 
+    public int[] subSet(final int fromele, final int toele) throws
+                            InvalidSubsetSelectionException {
         if (fromele > toele) {
-            throw new InvalidSubsetSelectionException
-                ("Invalid Arguments to Subset Exception");
+            throw new InvalidSubsetSelectionException(
+                    "Invalid Arguments to Subset Exception");
         } else {
             int fromindex = getIndex(fromele);
             int toindex = getIndex(toele);
@@ -204,7 +205,7 @@ class Sortedset extends Set {
                     if (headset != null) {
                         System.out.println(headset);
                     }
-                } catch(SetEmptyException e) {
+                } catch (SetEmptyException e) {
                     System.out.println(e.getMessage());
                 } catch (InvalidSubsetSelectionException e) {
                     System.out.println(e.getMessage());
