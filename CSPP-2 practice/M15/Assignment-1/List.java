@@ -169,7 +169,7 @@ public class List {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index < 0 || index >= size) {
-            throw new Exception();
+            throw new Exception("Invalid Position Exception");
         }
         if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
@@ -313,29 +313,29 @@ public class List {
      * @param      end        The end
      *
      * @return     { description_of_the_return_value }
-     *
+     *             
      * @throws     Exception  { exception_description }
      */
     public List subList(final int start, final int end) throws Exception {
         if (start > size || end > size) {
             // System.out.println("Index Out of Bounds Exception");
             // return null;
-            throw new Exception();
+            throw new Exception("Index Out of Bounds Exception");
         }
         if (start < 0 || end < 0) {
             // System.out.println("Index Out of Bounds Exception");
             // return null;
-            throw new Exception();
+            throw new Exception("Index Out of Bounds Exception");
         }
         if (start > end) {
             // System.out.println("Index Out of Bounds Exception");
             // return null;
-            throw new Exception();
+            throw new Exception("Index Out of Bounds Exception");
         }
         if (start == end) {
             // System.out.println("Index Out of Bounds Exception");
             // return null;
-            throw new Exception();
+            throw new Exception("Index Out of Bounds Exception");
         }
         List sublist = new List(end - start);
         for (int i = start; i < end; i++) {
@@ -430,7 +430,7 @@ public class List {
                             l.remove(Integer.parseInt(tokens[1]));
                         }
                     } catch (Exception e) {
-                        System.out.println("Invalid Position Exception");
+                        System.out.println(e.getMessage());
                     }
                 break;
                 case "indexOf":
@@ -472,7 +472,7 @@ public class List {
                             l.removeAll(a);
                         }
                     } catch (Exception e) {
-                        System.out.println("Invalid Position Exception");
+                        System.out.println(e.getMessage());
                     }
                 break;
                 case "subList":
@@ -487,7 +487,7 @@ public class List {
                             System.out.println(object);
                         }
                     } catch (Exception e) {
-                        System.out.println("Index Out of Bounds Exception");
+                        System.out.println(e.getMessage());
                     }
                 break;
                 case "equals":
