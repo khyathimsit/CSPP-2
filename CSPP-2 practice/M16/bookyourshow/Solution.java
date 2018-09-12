@@ -23,7 +23,7 @@ class Patron {
     /**.
      * { function_description }
      *
-     * @param      name  The name
+     * @param      nme  The name
      *
      * @return     { description_of_the_return_value }
      */
@@ -88,7 +88,7 @@ class Show {
      * @param      dtetme  The dtetme
      * @param      seat    The seat
      */
-    public Show(final String mvnme, final String dtetme, final String[] seat) {
+    Show(final String mvnme, final String dtetme, final String[] seat) {
         this.movename = mvnme;
         this.datetime = dtetme;
         this.seats = seat;
@@ -120,7 +120,7 @@ class Show {
      *
      * @return     { description_of_the_return_value }
      */
-    public String[] Setseat(final String[] seat) {
+    public String[] setseat(final String[] seat) {
         return this.seats = seat;
     }
     /**.
