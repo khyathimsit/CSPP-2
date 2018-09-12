@@ -16,7 +16,7 @@ class Patron {
      * @param      nme    The nme
      * @param      phono  The phono
      */
-    public Patron(final String nme, final String phono) {
+    Patron(final String nme, final String phono) {
         this.name = nme;
         this.phoneno = phono;
     }
@@ -27,8 +27,8 @@ class Patron {
      *
      * @return     { description_of_the_return_value }
      */
-    public String Setname(final String name) {
-        return this.name = name;
+    public String setname(final String nme) {
+        return this.name = nme;
     }
     /**.
      * { function_description }
@@ -37,7 +37,7 @@ class Patron {
      *
      * @return     { description_of_the_return_value }
      */
-    public String Setphoneno(final String phoneno) {
+    public String setphoneno(final String phoneno) {
         return this.phoneno = phoneno;
     }
     /**.
@@ -100,7 +100,7 @@ class Show {
      *
      * @return     { description_of_the_return_value }
      */
-    public String Setmovie(final String mvnme) {
+    public String setmovie(final String mvnme) {
         return this.movename = mvnme;
     }
     /**.
@@ -110,7 +110,7 @@ class Show {
      *
      * @return     { description_of_the_return_value }
      */
-    public String Setdatetime(final String dtetme) {
+    public String setdatetime(final String dtetme) {
         return this.datetime = dtetme;
     }
     /**.
