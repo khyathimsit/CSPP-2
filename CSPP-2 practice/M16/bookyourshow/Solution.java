@@ -1,15 +1,7 @@
 /**.
  * { item_description }
  */
-import java.io.BufferedInputStream;
-/**.
- * { item_description }
- */
 import java.util.Scanner;
-/**.
- *  { item_description }
- */
-import java.util.Arrays;
 /**.
  * Class for patron.
  */
@@ -24,7 +16,7 @@ class Patron {
      * @param      nme    The nme
      * @param      phono  The phono
      */
-    public Patron(String nme, String phono) {
+    public Patron(final String nme, final String phono) {
         this.name = nme;
         this.phoneno = phono;
     }
@@ -35,7 +27,7 @@ class Patron {
      *
      * @return     { description_of_the_return_value }
      */
-    public String Setname(String name) {
+    public String Setname(final String name) {
         return this.name = name;
     }
     /**.
@@ -45,7 +37,7 @@ class Patron {
      *
      * @return     { description_of_the_return_value }
      */
-    public String Setphoneno(String phoneno) {
+    public String Setphoneno(final String phoneno) {
         return this.phoneno = phoneno;
     }
     /**.
@@ -108,7 +100,7 @@ class Show {
      *
      * @return     { description_of_the_return_value }
      */
-    public String Setmovie(String mvnme) {
+    public String Setmovie(final String mvnme) {
         return this.movename = mvnme;
     }
     /**.
@@ -118,7 +110,7 @@ class Show {
      *
      * @return     { description_of_the_return_value }
      */
-    public String Setdatetime(String dtetme) {
+    public String Setdatetime(final String dtetme) {
         return this.datetime = dtetme;
     }
     /**.
