@@ -179,7 +179,7 @@ class BookYourShow {
     /**.
      * Constructs the object.
      */
-    public BookYourShow() {
+    BookYourShow() {
         shows = new List<Show>();
         tickets = new List<String>();
     }
@@ -188,7 +188,7 @@ class BookYourShow {
      *
      * @param      s     { parameter_description }
      */
-    public void addAShow(Show s) {
+    public void addAShow(final Show s) {
         shows.add(s);
     }
     /**.
@@ -202,8 +202,8 @@ class BookYourShow {
     public Show getAShow(final String movename, final String datetime) {
         for (int i = 0; i < shows.size(); i++) {
             Show show = shows.get(i);
-            if (show.getmovie().equals(movename) &&
-                show.getdatetime().equals(datetime)) {
+            if (show.getmovie().equals(movename)
+                && show.getdatetime().equals(datetime)) {
                 return show;
             }
         }
