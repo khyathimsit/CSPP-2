@@ -33,12 +33,12 @@ class Patron {
     /**.
      * { function_description }
      *
-     * @param      phoneno  The phoneno
+     * @param      phone  The phoneno
      *
      * @return     { description_of_the_return_value }
      */
     public String setphoneno(final String phone) {
-        return this.phoneno = phone;
+        return this.phoneno;
     }
     /**.
      * { function_description }
@@ -101,7 +101,7 @@ class Show {
      * @return     { description_of_the_return_value }
      */
     public String setmovie(final String mvnme) {
-        return this.movename = mvnme;
+        return this.movename;
     }
     /**.
      * { function_description }
@@ -111,7 +111,7 @@ class Show {
      * @return     { description_of_the_return_value }
      */
     public String setdatetime(final String dtetme) {
-        return this.datetime = dtetme;
+        return this.datetime;
     }
     /**.
      * { function_description }
@@ -121,7 +121,7 @@ class Show {
      * @return     { description_of_the_return_value }
      */
     public String[] setseat(final String[] seat) {
-        return this.seats = seat;
+        return this.seats;
     }
     /**.
      * { function_description }
