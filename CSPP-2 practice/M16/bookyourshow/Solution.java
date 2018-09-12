@@ -28,7 +28,7 @@ class Patron {
      * @return     { description_of_the_return_value }
      */
     public String setname(final String nme) {
-        return this.name = nme;
+        return this.name;
     }
     /**.
      * { function_description }
@@ -37,8 +37,8 @@ class Patron {
      *
      * @return     { description_of_the_return_value }
      */
-    public String setphoneno(final String phoneno) {
-        return this.phoneno = phoneno;
+    public String setphoneno(final String phone) {
+        return this.phoneno = phone;
     }
     /**.
      * { function_description }
