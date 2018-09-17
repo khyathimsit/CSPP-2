@@ -226,7 +226,7 @@ class Quiz {
 			    		throw new Exception("Error! Correct answer choice number is out of range for " + tokens[0]);
 			    	}
 			    } else {
-			    	throw new Exception(tokens[0] + "does not have enough answer choices");
+			    	throw new Exception(tokens[0] + " does not have enough answer choices");
 			    }
 			} else {
 				throw new Exception("Error! Malformed question");
