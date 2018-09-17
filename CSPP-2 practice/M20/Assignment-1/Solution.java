@@ -272,10 +272,10 @@ class Quiz {
         	for (int i = 0; i < questions.size(); i++) {
             	System.out.println(questions.get(i).getQuestionText());
             	if (questions.get(i).evaluateResponse(questions.get(i).getResponse())) {
-            		System.out.println("Correct Answer! - Marks Awarded: " + questions.get(i).getMaxMarks());
+            		System.out.println(" Correct Answer! - Marks Awarded: " + questions.get(i).getMaxMarks());
 					total += questions.get(i).getMaxMarks();
 				} else {
-                	System.out.println("Wrong Answer! - Penalty:" + questions.get(i).getPenalty());
+                	System.out.println(" Wrong Answer! - Penalty:" + questions.get(i).getPenalty());
                 	total += questions.get(i).getPenalty();
                 }
             }
