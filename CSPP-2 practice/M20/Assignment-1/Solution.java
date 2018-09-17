@@ -236,49 +236,50 @@ class Quiz {
 		System.out.println(qc + " are added to the quiz");
     }
 
-    // /**
-    //  * Starts a quiz.
-    //  *
-    //  * @param      scan  The scan
-    //  * @param      quiz  The quiz
-    //  * @param      q     The answer count
-    //  */
-    // public void startQuiz(final Scanner scan,
-    //     final Quiz quiz, final int q) {
-    //     // write your code here to display the quiz questions on the console.
-    //     // read the user responses from the console using scanner object.
-    //     // store the user respone in the question object
-    //     for (int i = 0; i < questions.size(); i++) {
-    //     	System.out.println(questions.get(i).getQuestionText() + "(" + questions.get(i).getMaxMarks() + ")");
-    //     	for (int j = 0 ; j < questions.get(i).choices.length - 1; j++) {
-    //     		System.out.print(questions.get(i).choices[j] +"\t");
-    //     	}
-    //     	System.out.println(questions.get(i).choices[j]);
-    //     	System.out.println();
-    //     	String line1 = scan.nextLine();
-    //     	questions.evaluateResponse(line1);
-    //     }
-    // }
-    // /**
-    //  * Displays the score report.
-    //  *
-    //  * @param      quiz     The quiz object
-    //  */
-    // public static void displayScore(final Quiz quiz) {
-    //     // write your code here to display the score report using quiz object.
-    //     int total = 0;
-    //     if (questions.size() > 0) {
-    //     	for (int i = 0; i < questions.size(); i++) {
-    //         	System.out.println(question.get(i).getQuestionText());
-    //         	if (question.get(i).evaluateResponse(question.get(i).getResponse())) {
-    //         		System.out.println("Correct Answer! - Marks Awarded:" + questions.get(i).getMaxMarks());
-				// } else {
-    //             	System.out.println("Wrong Answer! - Penalty:" + questions.get(i).getPenalty());
-    //             }
-    //         }
-    //     }
-    //     System.out.println("Total Score:" +total);
-    // }
+    /**
+     * Starts a quiz.
+     *
+     * @param      scan  The scan
+     * @param      quiz  The quiz
+     * @param      q     The answer count
+     */
+    public void startQuiz(final Scanner scan,
+        final Quiz quiz, final int q) {
+        // write your code here to display the quiz questions on the console.
+        // read the user responses from the console using scanner object.
+        // store the user respone in the question object
+        for (int i = 0; i < questions.size(); i++) {
+        	System.out.println(questions.get(i).getQuestionText() + "(" + questions.get(i).getMaxMarks() + ")");
+        	int j = 0;
+        	for (j = 0 ; j < questions.get(i).choices.length - 1; j++) {
+        		System.out.print(questions.get(i).choices[j] +"\t");
+        	}
+        	System.out.println(questions.get(i).choices[j]);
+        	System.out.println();
+        	String line1 = scan.nextLine();
+        	questions.get(i).setResponse(line1);
+        }
+    }
+    /**
+     * Displays the score report.
+     *
+     * @param      quiz     The quiz object
+     */
+    public void displayScore(final Quiz quiz) {
+        // write your code here to display the score report using quiz object.
+        int total = 0;
+        if (questions.size() > 0) {
+        	for (int i = 0; i < questions.size(); i++) {
+            	System.out.println(questions.get(i).getQuestionText());
+            	if (questions.get(i).evaluateResponse(questions.get(i).getResponse())) {
+            		System.out.println("Correct Answer! - Marks Awarded:" + questions.get(i).getMaxMarks());
+				} else {
+                	System.out.println("Wrong Answer! - Penalty:" + questions.get(i).getPenalty());
+                }
+            }
+        }
+        System.out.println("Total Score:" +total);
+    }
 }
 /**
  * Solution class for code-eval.
@@ -318,18 +319,18 @@ public final class Solution {
                 	System.out.println(e.getMessage());
                 }
                 break;
-                // case "START_QUIZ":
-                // 	System.out.println("|------------|");
-                // 	System.out.println("| Start Quiz |");
-                // 	System.out.println("|------------|");
-                // 	q.startQuiz(s, q, Integer.parseInt(tokens[1]));
-                // break;
-                // case "SCORE_REPORT":
-                // System.out.println("|--------------|");
-                // System.out.println("| Score Report |");
-                // System.out.println("|--------------|");
-                // q.displayScore(q);
-                // break;
+                case "START_QUIZ":
+                	System.out.println("|------------|");
+                	System.out.println("| Start Quiz |");
+                	System.out.println("|------------|");
+                	q.startQuiz(s, q, Integer.parseInt(tokens[1]));
+                break;
+                case "SCORE_REPORT":
+                System.out.println("|--------------|");
+                System.out.println("| Score Report |");
+                System.out.println("|--------------|");
+                q.displayScore(q);
+                break;
                 default:
                 break;
             }
