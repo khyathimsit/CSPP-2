@@ -10,11 +10,11 @@ class Question {
     /**
      * { var_description }.
      */
-    public String[] choices;
+    private String[] choices;
     /**
      * { var_description }.
      */
-    private String correctAnswer;
+    private int correctAnswer;
     /**
      * { var_description }.
      */
@@ -43,7 +43,7 @@ class Question {
      * @param      penalty1        The penalty 1
      */
     Question(final String question1, final String[] choices1,
-        final String correctAnswer1, final int maxMarks1, final int penalty1) {
+        final int correctAnswer1, final int maxMarks1, final int penalty1) {
     	this.questiontext = question1;
     	this.choices = choices1;
     	this.correctAnswer = correctAnswer1;
@@ -59,7 +59,7 @@ class Question {
      */
     public boolean evaluateResponse(final String choice) {
     	String[] tokens1 = choice.split(" ");
-    	if (this.correctAnswer.equals(tokens1[1])) {
+    	if (this.choices[correctAnswer - 1].equals(choice)) {
     		return true;
     	} else {
     		return false;
@@ -70,7 +70,7 @@ class Question {
      *
      * @return     The correct answer.
      */
-    public String getCorrectAnswer() {
+    public int getCorrectAnswer() {
         return correctAnswer;
     }
     /**
@@ -214,7 +214,7 @@ class Quiz {
 			    	if (Integer.parseInt(tokens[2]) >= 1 && Integer.parseInt(tokens[2]) <= keys.length) {
 			    		if (Integer.parseInt(tokens[3]) > 0) {
 			    			if (Integer.parseInt(tokens[4]) <= 0) {
-			    				quiz.addQuestion(new Question(tokens[0], keys, tokens[2],
+			    				quiz.addQuestion(new Question(tokens[0], keys, Integer.parseInt(tokens[2]),
 				                Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4])));
 			    			} else {
 			    				throw new Exception("Invalid penalty for " +tokens[0]);	
@@ -251,10 +251,11 @@ class Quiz {
         for (int i = 0; i < questions.size(); i++) {
         	System.out.println(questions.get(i).getQuestionText() + "(" + questions.get(i).getMaxMarks() + ")");
         	int j = 0;
-        	for (j = 0 ; j < questions.get(i).choices.length - 1; j++) {
-        		System.out.print(questions.get(i).choices[j] +"\t");
+        	String[] ch = questions.get(i).getChoice();
+        	for (j = 0 ; j < ch.length - 1; j++) {
+        		System.out.print(ch[j] +"\t");
         	}
-        	System.out.println(questions.get(i).choices[j]);
+        	System.out.println(ch[j]);
         	System.out.println();
         	String line1 = scan.nextLine();
         	questions.get(i).setResponse(line1);
@@ -271,6 +272,7 @@ class Quiz {
         if (questions.size() > 0) {
         	for (int i = 0; i < questions.size(); i++) {
             	System.out.println(questions.get(i).getQuestionText());
+            	//String[] chic;
             	if (questions.get(i).evaluateResponse(questions.get(i).getResponse())) {
             		System.out.println(" Correct Answer! - Marks Awarded: " + questions.get(i).getMaxMarks());
 					total += questions.get(i).getMaxMarks();
