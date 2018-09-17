@@ -192,19 +192,20 @@ class Quiz {
      *
      * @param      scan       The scan
      * @param      quiz       The quiz
-     * @param      q          The question count
+     * @param      q          The quarter
      *
+     * @throws     Exception  { exception_description }
      */
     public void loadQuestions(final Scanner scan,
-        final Quiz quiz, int q) throws Exception {
+        final Quiz quiz, final int q) throws Exception {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         int qc = q;
-        if (q == 0) {
+        if (qc == 0) {
             throw new Exception("Quiz does not have questions");
         }
-        while(q > 0) {
+        while (qc > 0) {
             String line = scan.nextLine();
             String[] tokens = line.split(":");
             if (tokens.length == 5 && (tokens[0]).length() != 0
@@ -223,11 +224,11 @@ class Quiz {
                                     Integer.parseInt(tokens[4])));
                             } else {
                                 throw new Exception("Invalid penalty for "
-                                    +tokens[0]);    
+                                    + tokens[0]);
                             }
                         } else {
                             throw new Exception("Invalid max marks for "
-                                +tokens[0]);
+                                + tokens[0]);
                         }
                     } else {
                         throw new Exception("Error! Correct answer choice"
@@ -240,9 +241,9 @@ class Quiz {
             } else {
                 throw new Exception("Error! Malformed question");
             }
-            q--;
+            qc--;
         }
-        System.out.println(qc + " are added to the quiz");
+        System.out.println(q + " are added to the quiz");
     }
 
     /**
@@ -262,8 +263,8 @@ class Quiz {
                 + "(" + questions.get(i).getMaxMarks() + ")");
             int j = 0;
             String[] ch = questions.get(i).getChoice();
-            for (j = 0 ; j < ch.length - 1; j++) {
-                System.out.print(ch[j] +"\t");
+            for (j = 0; j < ch.length - 1; j++) {
+                System.out.print(ch[j] + "\t");
             }
             System.out.println(ch[j]);
             System.out.println();
