@@ -146,7 +146,7 @@ class Quiz {
     /**
      * { var_description }.
      */
-    private List<Question>questions;
+    private List<Question> questions;
     private int size;
     /**
      * Constructs the object.
@@ -283,7 +283,8 @@ class Quiz {
             for (int i = 0; i < questions.size(); i++) {
                 System.out.println(questions.get(i).getQuestionText());
                 //String[] chic;
-                if (questions.get(i).evaluateResponse(questions.get(i).getResponse())) {
+                if (questions.get(i).evaluateResponse(
+                    questions.get(i).getResponse())) {
                     System.out.println(" Correct Answer! - Marks Awarded: "
                         + questions.get(i).getMaxMarks());
                     total += questions.get(i).getMaxMarks();
