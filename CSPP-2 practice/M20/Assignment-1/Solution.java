@@ -28,10 +28,14 @@ class Question {
      */
     private String response;
     /**
+     * { var_description }.
+     */
+    private final int onehundred = 100;
+    /**
      * Constructs the object.
      */
     Question() {
-        choices = new String[100];
+        choices = new String[onehundred];
     }
     /**
      * Constructs the object.
@@ -204,26 +208,29 @@ class Quiz {
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         int qc = q;
+        final int three = 3;
+        final int four = 4;
+        final int five = 5;
         if (qc == 0) {
             throw new Exception("Quiz does not have questions");
         }
         while (qc > 0) {
             String line = scan.nextLine();
             String[] tokens = line.split(":");
-            if (tokens.length == 5 && (tokens[0]).length() != 0
+            if (tokens.length == five && (tokens[0]).length() != 0
                 && (tokens[1]).length() != 0
-                && (tokens[2]).length() != 0 && (tokens[3]).length()
-                != 0 && (tokens[4]).length() != 0) {
+                && (tokens[2]).length() != 0 && (tokens[three]).length()
+                != 0 && (tokens[four]).length() != 0) {
                 String[] keys = tokens[1].split(",");
                 if (keys.length >= 2) {
                     if (Integer.parseInt(tokens[2]) >= 1
                         && Integer.parseInt(tokens[2]) <= keys.length) {
-                        if (Integer.parseInt(tokens[3]) > 0) {
-                            if (Integer.parseInt(tokens[4]) <= 0) {
+                        if (Integer.parseInt(tokens[three]) > 0) {
+                            if (Integer.parseInt(tokens[four]) <= 0) {
                                 quiz.addQuestion(new Question(tokens[0], keys,
                                     Integer.parseInt(tokens[2]),
-                                    Integer.parseInt(tokens[3]),
-                                    Integer.parseInt(tokens[4])));
+                                    Integer.parseInt(tokens[three]),
+                                    Integer.parseInt(tokens[four])));
                             } else {
                                 throw new Exception("Invalid penalty for "
                                     + tokens[0]);
