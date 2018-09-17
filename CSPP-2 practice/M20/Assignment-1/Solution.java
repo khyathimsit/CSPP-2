@@ -279,8 +279,8 @@ class Quiz {
                 	total += questions.get(i).getPenalty();
                 }
             }
+            System.out.println("Total Score: " + total);
         }
-        System.out.println("Total Score: " + total);
     }
 }
 /**
