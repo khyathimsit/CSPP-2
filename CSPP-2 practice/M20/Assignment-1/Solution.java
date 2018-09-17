@@ -6,7 +6,7 @@ class Question {
     /**
      * { var_description }.
      */
-    public String questiontext;
+    private String questiontext;
     /**
      * { var_description }.
      */
@@ -61,9 +61,8 @@ class Question {
         String[] tokens1 = choice.split(" ");
         if (this.choices[correctAnswer - 1].equals(choice)) {
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
     /**
      * Gets the correct answer.
@@ -139,7 +138,7 @@ class Quiz {
      * { var_description }.
      */
     private final int onehundred = 100;
-    /**
+    /**.
      * { var_description }.
      */
     //private Question[] questions;
@@ -147,8 +146,11 @@ class Quiz {
      * { var_description }.
      */
     private List<Question> questions;
+    /**.
+     * { var_description }
+     */
     private int size;
-    /**
+    /**.
      * Constructs the object.
      */
     Quiz() {
