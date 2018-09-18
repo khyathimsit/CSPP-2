@@ -99,7 +99,7 @@ class Quiz {
         // for (int i = 0; i< tokens.size(); i++) {
         //  questions.add(tokens[i]);
         // }
-        for (int i = 0; i <= questionCount; i++) {
+        for (int i = 0; i < questionCount; i++) {
             String tokens = s.nextLine();
             questions.add(tokens);
         }
@@ -117,6 +117,7 @@ class Quiz {
         if (words1.length < 2) {
             System.out.println(words[0] + "does not have enough answer choices");
         }
+        Quiz q = new Quiz();
     }
 
     static String[] words;

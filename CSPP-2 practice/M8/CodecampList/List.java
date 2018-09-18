@@ -272,6 +272,45 @@ public class List {
         return -1;
     }
     /**.
+     * Function to count the number of times the value is repeated.
+     *
+     * @param      item  The item
+     *
+     * @return     integer
+     */
+    public int count(final int item) {
+        int cnt = 0;
+        for (int i = 0; i < size; i++) {
+            if (item == array[i]) {
+                cnt = cnt + 1;
+            }
+        }
+        return cnt;
+    }
+    /**.
+     * Adds all.
+     *
+     * @param      array  The array
+     */
+    public void addAll(final int[] array) {
+    	for(int i = 0; i < array.length; i++)
+    		add(array[i]);
+    }
+    /**.
+     * Adds each element at the required index.
+     *
+     * @param      index  The index
+     * @param      item   The item
+     */
+    public void add1(final int index, final int item) {
+        for (int i = size; i > index; i--) {
+            array[i] = array[i - 1];
+        }
+        array[index] = item;
+        size++;
+    
+    }
+    /**.
      * Main function
      *
      * @param      args  The arguments
@@ -318,6 +357,19 @@ public class List {
                     break;
                 case "contains":
                     System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                    break;
+                case "count":
+                    System.out.println(l.count(Integer.parseInt(tokens[1])));
+                    break; 
+                case "add1":
+                    l.add1(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
+                    break;
+                case "addAll":
+                    int[] array1 = new int[tokens.length - 1];
+                    for (int i = 0; i < tokens.length - 1; i++){
+                	   array1[i] = Integer.parseInt(tokens[i + 1]);
+                    }
+                    l.addAll(array1);
                     break;
                 default:
                     break;

@@ -11,12 +11,12 @@ import java.util.Scanner;
  */
 import java.util.Arrays;
 
-/**
+/**.
  * Class for set.
  * @author : 
  */
 class Set {
-    /**
+    /**.
      * This constant is used to create an array
      * with the initial capacity.
      */
@@ -25,15 +25,15 @@ class Set {
      * Set decalaration
      */
     public int[] set;
-    /**
+    /**.
      * Size
      */
     public int size;
     public Set() {
-        set = new int[10];
+        set = new int[TEN];
         size = 0;
     }
-    /**
+    /**.
      * Function to add all the elements into the set
      *
      * @param      item  The item
@@ -46,7 +46,7 @@ class Set {
             set[size++] = item;
         }
     }
-    /**
+    /**.
      * Function to resize the set by double.
      */
     private void resize() {
@@ -62,7 +62,7 @@ class Set {
             add(arr[i]);
         }
     }
-    /**
+    /**.
      * Function to find yhe intersection of two sets
      *
      * @param  other  { parameter_description }
@@ -79,7 +79,7 @@ class Set {
         }
         return result;
     }
-    /**
+    /**.
      * retains all the elements from the set.
      *
      * @param      arr   The arr
@@ -99,7 +99,7 @@ class Set {
         }
         return result1;
     }
-    /**
+    /**.
      * Function to find out the cartesian product of two sets.
      *
      * @param      other  The other
@@ -168,7 +168,7 @@ class Set {
             return set[index];
         }
     }
-    /**
+    /**.
      * String version of the object.
      *
      * @return     String representation of the object.
@@ -191,7 +191,7 @@ class Set {
  * Solution class for code-eval.
  */
 public final class Solution {
-    /**
+    /**.
      * helper function to convert string input to int array.
      *
      * @param      s     { string input from test case file }
