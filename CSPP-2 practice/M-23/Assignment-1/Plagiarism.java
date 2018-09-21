@@ -86,8 +86,8 @@ class Plagiarism {
 		
 		    Hashtable<String, Integer> ht = new Hashtable<String, Integer>();
 			doc = doc.toLowerCase();
-			String token = doc.replaceAll("[^a-zA-Z ]", "");
-			String[] tokens = token.split(" ");
+			//String token = doc.replaceAll("[^a-zA-Z ]", "");
+			String[] tokens = doc.replaceAll("[^a-zA-Z_]"," ").split(" ");
 			try{
 			List<String> wrdList = removeStopWords(tokens);
 			for (int i = 0;i < wrdList.size(); i++) {
