@@ -1,5 +1,8 @@
 import java.util.*;
 import java.io.File;
+/**
+ * class Solution
+ */
 public final class Solution {
 	private Solution() {
 
