@@ -121,13 +121,13 @@ class Plagiarism {
 		for(int i = 0; i < listFiles.length - 1; i++) {
 			sb.append(listFiles[i].getName() + "\t");
 			for(int k = 0; k < listFiles.length; k++) {
-				sb.append(Math.round(matrix[i][k]) + "\t\t");
+				sb.append((double)Math.round(matrix[i][k]) + "\t\t");
 			}
 			sb.append("\n");
 		}
 		sb.append(listFiles[listFiles.length - 1].getName() + "\t");
 		for(int k = 0; k < listFiles.length; k++) {
-			sb.append(Math.round(matrix[listFiles.length - 1][k]) + "\t\t");
+			sb.append((double)Math.round(matrix[listFiles.length - 1][k]) + "\t\t");
 		}
 		System.out.println(sb.toString());
 	}
