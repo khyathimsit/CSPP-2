@@ -35,17 +35,21 @@ class Task {
         if (title.length() == 0) {
             throw new Exception("Title not provided");
         }
-        //     if (time < 0) {
-        //         if (status != "todo" || status != "done") {
+        if (time < 0) {
+            throw new Exception("Invalid timeToComplete " + time);
+        }
+        if (status != "todo" || status != "done") {
+            throw new Exception("Invalid status " + status);
+        }
         //             else {
         //                 throw new Exception("Invalid status " + tokens[6]);
         //             }
         //         } else {
         //             throw new Exception("Invalid timeToComplete " + tokens[3]);
         //         }
-        //     } else {
-        //         throw new Exception("Title not provided");
-        //     }
+        //     // } else {
+        //     //     throw new Exception("Title not provided");
+        //     // }
         // }
         
         this.title = title;
