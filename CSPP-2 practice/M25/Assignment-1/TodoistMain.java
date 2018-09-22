@@ -39,11 +39,29 @@ import java.util.Arrays;
 //}
 
 class Task {
+    /**
+     * { var_description }
+     */
     String title;
+    /**
+     * { var_description }
+     */
     String assignedTo;
+    /**
+     * { var_description }
+     */
     int timeToComplete;
+    /**
+     * { var_description }
+     */
     boolean important;
+    /**
+     * { var_description }
+     */
     boolean urgent;
+    /**
+     * { var_description }
+     */
     String status;
 
     Task() {
@@ -169,6 +187,11 @@ class Task {
     public void setStatus(final String status){
         this.status = status ;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         String str = "";
         String imp;
@@ -191,7 +214,7 @@ class Task {
 /**
  * Class for todoist main.
  */
-public class TodoistMain {
+public final class TodoistMain {
 
     /**
      * Starts a test.
