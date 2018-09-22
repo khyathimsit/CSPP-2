@@ -7,31 +7,36 @@ import java.util.Arrays;
 // class Todoist {
 //     Task[] tasks;
 //     int size;
-
+// 
 //     Todoist() {
 //         tasks = new Task[100];
 //         size = 0;
 //     }
 
 //     public void addTask(Task task){
-//         if (size == tasks.size()) {
+//         try {
+//             tasks[size++] = task;
+//         } catch(Exception e) {
 //             resize();
+//             addTask(task);
 //         }
-//         tasks[size++] = task;
-//     }
-
-//     public int size() {
-//         return size;
 //     }
 
 //     public void resize() {
 //         tasks = Arrays.copyOf(tasks, size * 2);
 //     }
-
-//     public String toString() {
-
-//     }
-// }
+    // public Task[] getNextTask(String name, int n) {
+    //     Task[] gettask = new Task[n];
+    //     for (int i = 0; i < size; i++) {
+    //         if(tasks[i].getAssignedTo.equals(name) && tasks[i].status.equals("todo")) {
+    //             if (tasks[i].important && tasks[i].urgent) {
+    //                 return tasks[i];
+    //             }
+    //         }
+    //     }
+    //     return null;
+    // }
+//}
 
 class Task {
     String title;
@@ -47,19 +52,9 @@ class Task {
 
     Task(String title, String name, int time, boolean imp, boolean urgent, String status) throws Exception{
         if (title.equals("") || title == null)throw new Exception("Title not provided");
-        else if (timeToComplete < 0) throw new Exception("Invalid timeToComplete " + time);
-        else if (status != "todo" || status != "done")throw new Exception("Invalid status " + status);
-        //             // this.title = title;
-        //             // this.timeToComplete = time;
-        //             // this.status = status;
-        //         } else {
-        //             throw new Exception("Invalid status " + status);
-        //         }
-        //     } else {
-        //         throw new Exception("Invalid timeToComplete " + time);
-        //     }
-        // } else {
-        //     throw new Exception("Title not provided");
+        if (timeToComplete < 0) throw new Exception("Invalid timeToComplete " + time);
+        if (status != "todo" || status != "done")throw new Exception("Invalid status " + status);
+        
         this.title = title;
         this.assignedTo = name;
         this.timeToComplete = time;
@@ -141,14 +136,14 @@ public class TodoistMain {
                     testTask(tokens);
                 break;
                 // case "add-task":
-                //     testAddTask(todo, tokens);
+                //     todo.addTask(todo, tokens);
                 // break;
                 // case "print-todoist":
                 //     System.out.println(todo);
                 // break;
                 // case "get-next":
                 //     System.out.println(todo.getNextTask(tokens[1]));
-                // break;
+                //break;
                 // case "get-next-n":
                 //     int n = Integer.parseInt(tokens[2]);
                 //     Task[] tasks = todo.getNextTask(tokens[1], n);
