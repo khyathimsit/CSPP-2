@@ -51,10 +51,10 @@ class Task {
     }
 
     Task(String title, String name, int time, boolean imp, boolean urgent, String status) throws Exception{
-        if (title.equals("") || title == null)throw new Exception("Title not provided");
-        if (timeToComplete < 0) throw new Exception("Invalid timeToComplete " + time);
-        if (status != "todo" || status != "done")throw new Exception("Invalid status " + status);
-        
+        // if (title.equals("") || title == null)throw new Exception("Title not provided");
+        // if (timeToComplete < 0) throw new Exception("Invalid timeToComplete " + time);
+        // if (status != "todo" || status != "done")throw new Exception("Invalid status " + status);
+
         this.title = title;
         this.assignedTo = name;
         this.timeToComplete = time;
