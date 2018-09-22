@@ -5,7 +5,7 @@ import java.util.Arrays;
   * write your code below this comment
   */
 // class Todoist {
-//     Task[] = tasks;
+//     Task[] tasks;
 //     int size;
 
 //     Todoist() {
@@ -14,8 +14,22 @@ import java.util.Arrays;
 //     }
 
 //     public void addTask(Task task){
-//         tasks[size] = task;
-//         size++;
+//         if (size == tasks.size()) {
+//             resize();
+//         }
+//         tasks[size++] = task;
+//     }
+
+//     public int size() {
+//         return size;
+//     }
+
+//     public void resize() {
+//         tasks = Arrays.copyOf(tasks, size * 2);
+//     }
+
+//     public String toString() {
+
 //     }
 // }
 
@@ -32,27 +46,26 @@ class Task {
     }
 
     Task(String title, String name, int time, boolean imp, boolean urgent, String status) throws Exception{
-        if (title.length() != 0) {
-            if (time > 0) {
-                if (status == "todo" || status == "done") {
-                    this.title = title;
-                    this.timeToComplete = time;
-                    this.status = status;
-                } else {
-                    throw new Exception("Invalid status " + status);
-                }
-            } else {
-                    throw new Exception("Invalid timeToComplete " + time);
-            }
-        } else {
-                throw new Exception("Title not provided");
-        }
-        //this.title = title;
+        if (title.equals("") || title == null)throw new Exception("Invalid status " + status);
+        if (timeToComplete < 0) throw new Exception("Invalid timeToComplete " + time);
+        if (status == "todo" || status == "done")throw new Exception("Invalid status " + status);
+        //             // this.title = title;
+        //             // this.timeToComplete = time;
+        //             // this.status = status;
+        //         } else {
+        //             throw new Exception("Invalid status " + status);
+        //         }
+        //     } else {
+        //         throw new Exception("Invalid timeToComplete " + time);
+        //     }
+        // } else {
+        //     throw new Exception("Title not provided");
+        this.title = title;
         this.assignedTo = name;
-        //this.timeToComplete = time;
+        this.timeToComplete = time;
         this.important = imp;
         this.urgent = urgent;
-        //this.status = status;
+        this.status = status;
     }
 
     public String getTitle() {
@@ -94,27 +107,20 @@ class Task {
     public String toString() {
         String str = "";
         String imp;
-       // String imp1 = "Not Important";
         String urg;
-        //String urgent1 = "Not Urgent";
         if (important) {
             imp = "Important";
         } else {
             imp = "Not Important";
         }
-
         if (urgent) {
             urg = "Urgent";
         } else {
             urg = "Not Urgent";
         }
-
-
         return str += getTitle() + ", " + getAssignedTo() + ", " + getTime() + ", " + imp
                                  + ", " + urg + ", " + getStatus(); 
     }
-
-
 }
 
 /**
