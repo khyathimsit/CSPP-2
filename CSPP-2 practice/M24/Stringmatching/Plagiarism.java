@@ -126,6 +126,7 @@ class Plagiarism {
 			sb.append(listFiles[i].getName() + "    ");
 			for(int k = 0; k < listFiles.length; k++) {
 				space = String.valueOf((double)Math.round(matrix[i][k])).length();
+				space = 9 - space;
 				for (int m = 0; m< space;m++) {
 					sb.append(" ");
 				}
@@ -136,12 +137,14 @@ class Plagiarism {
 		sb.append(listFiles[listFiles.length - 1].getName() + "    ");
 		for(int k = 0; k < listFiles.length - 1; k++) {
 			space = String.valueOf((double)Math.round(matrix[listFiles.length - 1][k])).length();
+			space = 9 - space;
 				for (int m = 0; m< space;m++) {
 					sb.append(" ");
 				}
 			sb.append((double)Math.round(matrix[listFiles.length - 1][k]) + "   ");
 		}
 		space = String.valueOf((double)Math.round(matrix[listFiles.length - 1][listFiles.length - 1])).length();
+		space = 9 - space;
 				for (int m = 0; m< space;m++) {
 					sb.append(" ");
 				}
