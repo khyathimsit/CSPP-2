@@ -113,6 +113,9 @@ class Plagiarism {
 	}
 	public void print(double[][] matrix, File[] listFiles) {
 		StringBuffer sb = new StringBuffer();
+		long maxval = 0;
+		String file1 = "";
+		String file2 = "";
 		sb.append("\t\t");
 		for(int i = 0; i < listFiles.length-1; i++) {
 			sb.append(listFiles[i].getName() + "\t");
@@ -130,6 +133,18 @@ class Plagiarism {
 			sb.append((double)Math.round(matrix[listFiles.length - 1][k]) + "\t\t");
 		}
 		System.out.println(sb.toString());
+		for (int i = 0; i< listFiles.length - 1;i++) {
+			for (int j = 0; j< listFiles.length - 1;j++) {
+				if (!(listFiles[i].getName().equals(listFiles[j].getName()))) {
+					if (maxval < Math.round(matrix[i][j])) {
+						maxval = Math.round(matrix[i][j]);
+						file1 = listFiles[i].getName();
+						file2 = listFiles[j].getName();
+					}
+				}
+			}
+		}
+		System.out.println("Maximum similarity is between " + file1 + " and " + file2);
 	}
 	public static int longestSubstring(String s1, String s2) {
 		// System.out.println("in method");
