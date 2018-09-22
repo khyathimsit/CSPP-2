@@ -141,7 +141,7 @@ class Plagiarism {
 				for (int m = 0; m< space;m++) {
 					sb.append(" ");
 				}
-			sb.append((double)Math.round(matrix[listFiles.length - 1][k]) + "   ");
+			sb.append((double)Math.round(matrix[listFiles.length - 1][k]) + "    ");
 		}
 		space = String.valueOf((double)Math.round(matrix[listFiles.length - 1][listFiles.length - 1])).length();
 		space = 9 - space;
