@@ -31,7 +31,23 @@ class Task {
 
     }
 
-    Task(String title, String name, int time, boolean imp, boolean urgent, String status) {
+    Task(String title, String name, int time, boolean imp, boolean urgent, String status) throws Exception{
+        if (title.length() == 0) {
+            throw new Exception("Title not provided");
+        }
+        //     if (time < 0) {
+        //         if (status != "todo" || status != "done") {
+        //             else {
+        //                 throw new Exception("Invalid status " + tokens[6]);
+        //             }
+        //         } else {
+        //             throw new Exception("Invalid timeToComplete " + tokens[3]);
+        //         }
+        //     } else {
+        //         throw new Exception("Title not provided");
+        //     }
+        // }
+        
         this.title = title;
         this.assignedTo = name;
         this.timeToComplete = time;
@@ -78,9 +94,9 @@ class Task {
     }
     public String toString() {
         String str = "";
-        String imp = "Important";
+        String imp;
        // String imp1 = "Not Important";
-        String urg = "Urgent";
+        String urg;
         //String urgent1 = "Not Urgent";
         if (important) {
             imp = "Important";
