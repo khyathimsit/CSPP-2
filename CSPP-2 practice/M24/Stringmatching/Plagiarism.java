@@ -116,25 +116,39 @@ class Plagiarism {
 		long maxval = 0;
 		String file1 = "";
 		String file2 = "";
-		sb.append("\t\t");
+		int space = 0;
+		sb.append("\t    ");
 		for(int i = 0; i < listFiles.length-1; i++) {
-			sb.append(listFiles[i].getName() + "\t");
+			sb.append(listFiles[i].getName() + "    ");
 		}
 		sb.append(listFiles[listFiles.length - 1].getName() + "\n");
 		for(int i = 0; i < listFiles.length - 1; i++) {
-			sb.append(listFiles[i].getName() + "\t");
+			sb.append(listFiles[i].getName() + "    ");
 			for(int k = 0; k < listFiles.length; k++) {
-				sb.append((double)Math.round(matrix[i][k]) + "\t\t");
+				space = String.valueOf((double)Math.round(matrix[i][k])).length();
+				for (int m = 0; m< space;m++) {
+					sb.append(" ");
+				}
+				sb.append((double)Math.round(matrix[i][k]) + "    ");
 			}
 			sb.append("\n");
 		}
-		sb.append(listFiles[listFiles.length - 1].getName() + "\t");
-		for(int k = 0; k < listFiles.length; k++) {
-			sb.append((double)Math.round(matrix[listFiles.length - 1][k]) + "\t\t");
+		sb.append(listFiles[listFiles.length - 1].getName() + "    ");
+		for(int k = 0; k < listFiles.length - 1; k++) {
+			space = String.valueOf((double)Math.round(matrix[listFiles.length - 1][k])).length();
+				for (int m = 0; m< space;m++) {
+					sb.append(" ");
+				}
+			sb.append((double)Math.round(matrix[listFiles.length - 1][k]) + "   ");
 		}
+		space = String.valueOf((double)Math.round(matrix[listFiles.length - 1][listFiles.length - 1])).length();
+				for (int m = 0; m< space;m++) {
+					sb.append(" ");
+				}
+		sb.append((double)Math.round(matrix[listFiles.length - 1][listFiles.length - 1]));
 		System.out.println(sb.toString());
-		for (int i = 0; i< listFiles.length;i++) {
-			for (int j = 0; j< listFiles.length;j++) {
+		for (int i = 0;i< listFiles.length;i++) {
+			for (int j = 0;j< listFiles.length;j++) {
 				if (!(listFiles[i].getName().equals(listFiles[j].getName()))) {
 					if (maxval < Math.round(matrix[i][j])) {
 						maxval = Math.round(matrix[i][j]);
