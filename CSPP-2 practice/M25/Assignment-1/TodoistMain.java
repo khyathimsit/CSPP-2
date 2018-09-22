@@ -78,7 +78,22 @@ class Task {
     }
     public String toString() {
         String str = "";
-        return str += getTitle() + ", " + getAssignedTo() + ", " + getTime() + ", " + getImportant()
+        String imp = "Important";
+        String imp1 = "Not Important";
+        String urgent = "Urgent";
+        String urgent1 = "Not Urgent";
+        if (important) {
+            imp = "Important";
+        } else {
+            imp = "Not Important";
+        }
+
+        if (urgent) {
+            urgent = "Urgent";
+        }
+
+
+        return str += getTitle() + ", " + getAssignedTo() + ", " + getTime() + ", " + imp
                                  + ", " + getUrgent() + ", " + getStatus(); 
     }
 
