@@ -47,11 +47,22 @@ class Task {
     String status;
 
     Task() {
-
+        /**
+         * { item_description }
+         */
     }
-
+    /**
+     * Constructs the object.
+     *
+     * @param      title   The title
+     * @param      name    The name
+     * @param      time    The time
+     * @param      imp     The imp
+     * @param      urgent  The urgent
+     * @param      status  The status
+     */
     Task(String title, String name, int time, boolean imp, boolean urgent, String status) throws Exception{
-        // if (title.equals("") || title == null)throw new Exception("Title not provided");
+         if (title.equals("") || title == null)throw new Exception("Title not provided");
         // if (timeToComplete < 0) throw new Exception("Invalid timeToComplete " + time);
         // if (status != "todo" || status != "done")throw new Exception("Invalid status " + status);
 
@@ -62,41 +73,100 @@ class Task {
         this.urgent = urgent;
         this.status = status;
     }
-
+    /**
+     * Gets the title.
+     *
+     * @return     The title.
+     */
     public String getTitle() {
         return title;
     }
-    public void setTitle(String title) {
+    /**
+     * Sets the title.
+     *
+     * @param      title  The title
+     */
+    public void setTitle(final String title) {
         this.title = title;
     }
+    /**
+     * Gets the assigned to.
+     *
+     * @return     The assigned to.
+     */
     public String getAssignedTo(){
         return assignedTo;
     }
-    public void setAssignedTo(String name){
+    /**
+     * Sets the assigned to.
+     *
+     * @param      name  The name
+     */
+    public void setAssignedTo(final String name){
         this.assignedTo = name;
     }
+    /**
+     * Gets the time.
+     *
+     * @return     The time.
+     */
     public int getTime(){
         return timeToComplete;
     }
-    public void setTime(int time){
+    /**
+     * Sets the time.
+     *
+     * @param      time  The time
+     */
+    public void setTime(final int time){
         this.timeToComplete = time;
     }
+    /**
+     * Gets the important.
+     *
+     * @return     The important.
+     */
     public boolean getImportant() {
         return important;
     }
-    public void setImportant(boolean imp) {
+    /**
+     * Sets the important.
+     *
+     * @param      imp   The imp
+     */
+    public void setImportant(final boolean imp) {
         this.important = imp;
     }
+    /**
+     * Gets the urgent.
+     *
+     * @return     The urgent.
+     */
     public boolean getUrgent() {
         return urgent;
     }
-    public void setUrgent(boolean urgent) {
+    /**
+     * Sets the urgent.
+     *
+     * @param      urgent  The urgent
+     */
+    public void setUrgent(final boolean urgent) {
         this.urgent = urgent; 
     }
+    /**
+     * Gets the status.
+     *
+     * @return     The status.
+     */
     public String getStatus(){
         return status;
     }
-    public void setStatus(String status){
+    /**
+     * Sets the status.
+     *
+     * @param      status  The status
+     */
+    public void setStatus(final String status){
         this.status = status ;
     }
     public String toString() {
