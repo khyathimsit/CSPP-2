@@ -133,8 +133,8 @@ class Plagiarism {
 			sb.append((double)Math.round(matrix[listFiles.length - 1][k]) + "\t\t");
 		}
 		System.out.println(sb.toString());
-		for (int i = 0; i< listFiles.length - 1;i++) {
-			for (int j = 0; j< listFiles.length - 1;j++) {
+		for (int i = 0; i< listFiles.length;i++) {
+			for (int j = 0; j< listFiles.length;j++) {
 				if (!(listFiles[i].getName().equals(listFiles[j].getName()))) {
 					if (maxval < Math.round(matrix[i][j])) {
 						maxval = Math.round(matrix[i][j]);
