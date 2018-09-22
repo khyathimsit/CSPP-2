@@ -79,9 +79,9 @@ class Task {
     public String toString() {
         String str = "";
         String imp = "Important";
-        String imp1 = "Not Important";
-        String urgent = "Urgent";
-        String urgent1 = "Not Urgent";
+       // String imp1 = "Not Important";
+        String urg = "Urgent";
+        //String urgent1 = "Not Urgent";
         if (important) {
             imp = "Important";
         } else {
@@ -89,12 +89,14 @@ class Task {
         }
 
         if (urgent) {
-            urgent = "Urgent";
+            urg = "Urgent";
+        } else {
+            urg = "Not Urgent";
         }
 
 
         return str += getTitle() + ", " + getAssignedTo() + ", " + getTime() + ", " + imp
-                                 + ", " + getUrgent() + ", " + getStatus(); 
+                                 + ", " + urg + ", " + getStatus(); 
     }
 
 
