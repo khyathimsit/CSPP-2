@@ -117,7 +117,7 @@ class Plagiarism {
 		String file1 = "";
 		String file2 = "";
 		int space = 0;
-		sb.append("\t     ");
+		sb.append("\t      ");
 		for(int i = 0; i < listFiles.length-1; i++) {
 			sb.append(listFiles[i].getName() + "    ");
 		}
@@ -146,7 +146,7 @@ class Plagiarism {
 		space = String.valueOf((double)Math.round(matrix[listFiles.length - 1][listFiles.length - 1])).length();
 		space = 9 - space;
 				for (int m = 0; m< space;m++) {
-					sb.append("  ");
+					sb.append(" ");
 				}
 		sb.append((double)Math.round(matrix[listFiles.length - 1][listFiles.length - 1]));
 		System.out.println(sb.toString());
