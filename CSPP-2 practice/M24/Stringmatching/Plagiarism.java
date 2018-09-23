@@ -123,7 +123,7 @@ class Plagiarism {
 		}
 		sb.append(listFiles[listFiles.length - 1].getName() + "\n");
 		for(int i = 0; i < listFiles.length - 1; i++) {
-			sb.append(listFiles[i].getName() + "    ");
+			sb.append(listFiles[i].getName() + "     ");
 			for(int k = 0; k < listFiles.length; k++) {
 				space = String.valueOf((double)Math.round(matrix[i][k])).length();
 				space = 9 - space;
